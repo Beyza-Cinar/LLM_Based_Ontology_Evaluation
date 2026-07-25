@@ -1,0 +1,7 @@
+?subject	?property	?value
+<http://bioportal.bioontology.org/ontologies/versionSubject>	<http://www.w3.org/2002/07/owl#versionInfo>	"2015-11-20"
+<http://purl.obolibrary.org/obo/DDO.owl>	<http://www.w3.org/2002/07/owl#versionInfo>	"2015-11-20"
+<http://purl.obolibrary.org/obo/OAE_0000663>	<http://www.w3.org/2002/07/owl#backwardCompatibleWith>	"a carbon dioxide abnormal AE that has an outcome of a decreased level of carbon dioxide in the blood"
+<http://purl.obolibrary.org/obo/iao/dev/ontology-metadata.owl>	<http://www.w3.org/2002/07/owl#versionInfo>	"$Revision$"@en
+<https://bioportal.bioontology.org/ontologies/FASTO.owl>	<http://www.w3.org/2002/07/owl#versionIRI>	<https://bioportal.bioontology.org/ontologies/FASTO.owl/1.0>
+<https://bioportal.bioontology.org/ontologies/FASTO.owl>	<http://www.w3.org/2002/07/owl#versionInfo>	"1.0"

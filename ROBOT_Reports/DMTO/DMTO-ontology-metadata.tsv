@@ -1,0 +1,11 @@
+?ontology	?property	?value
+<https://bioportal.bioontology.org/ontologies/DMTO.owl>	<http://protege.stanford.edu/plugins/owl/protege#defaultLanguage>	"en"
+<https://bioportal.bioontology.org/ontologies/DMTO.owl>	<http://purl.obolibrary.org/obo/IAO_0000115>	"DMTO is an OWL 2 ontology for creating customized treatment plans for diabetic patients. The ontology is based on BFO and OGMS. In addition, it extends the DDO ontology by adding the treatment classes and axioms to the existing diagnosis part. "
+<https://bioportal.bioontology.org/ontologies/DMTO.owl>	<http://purl.org/dc/elements/1.1/date>	"2017-3-27"
+<https://bioportal.bioontology.org/ontologies/DMTO.owl>	<http://www.co-ode.org/ontologies/ont.owl#DDO_0000002>	"Shaker El-Sappagh"
+<https://bioportal.bioontology.org/ontologies/DMTO.owl>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://www.w3.org/2002/07/owl#Ontology>
+<https://bioportal.bioontology.org/ontologies/DMTO.owl>	<http://www.w3.org/2000/01/rdf-schema#comment>	""@en
+<https://bioportal.bioontology.org/ontologies/DMTO.owl>	<http://www.w3.org/2000/01/rdf-schema#comment>	"\n      An OWL Ontology of Time (OWL-Time).\n    "
+<https://bioportal.bioontology.org/ontologies/DMTO.owl>	<http://www.w3.org/2000/01/rdf-schema#seeAlso>	<http://www.w3.org/TR/owl-time>
+<https://bioportal.bioontology.org/ontologies/DMTO.owl>	<http://www.w3.org/2002/07/owl#versionIRI>	<https://bioportal.bioontology.org/ontologies/DMTO.owl/1.0>
+<https://bioportal.bioontology.org/ontologies/DMTO.owl>	<http://www.w3.org/2002/07/owl#versionInfo>	"1.0"

@@ -1,0 +1,9 @@
+?property	?value
+<http://protege.stanford.edu/plugins/owl/protege#defaultLanguage>	"en"
+<http://purl.obolibrary.org/obo/IAO_0000115>	"FHIR And SSN based Type 1 diabetes Ontology (FASTO) is an OWL 2 ontology for managing insulin for diabetes patients especially type 1 diabetics. The ontology is based on BFO as the top-level ontology, SSN sensor ontology, and HL7 FHIR standard. This ontology can support the development of mobile health applications. It supports the interoperability between clinical decision support systems on a cloud environment, distributed electronic health records, mobile devices, and wireless body area networks."
+<http://purl.org/dc/elements/1.1/date>	"2018-10-20"^^<http://www.w3.org/2001/XMLSchema#date>
+<http://www.co-ode.org/ontologies/ont.owl#DDO_0000002>	"Shaker El-Sappagh"
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://www.w3.org/2002/07/owl#Ontology>
+<http://www.w3.org/2000/01/rdf-schema#comment>	""@en
+<http://www.w3.org/2002/07/owl#versionIRI>	<https://bioportal.bioontology.org/ontologies/FASTO.owl/1.0>
+<http://www.w3.org/2002/07/owl#versionInfo>	"1.0"

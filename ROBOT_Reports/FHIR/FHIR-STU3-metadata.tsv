@@ -1,0 +1,5 @@
+?ontology	?property	?value
+<http://hl7.org/fhir/fhir.ttl>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://www.w3.org/2002/07/owl#Ontology>
+<http://hl7.org/fhir/fhir.ttl>	<http://www.w3.org/2000/01/rdf-schema#comment>	"Formal model of FHIR Clinical Resources"
+<http://hl7.org/fhir/fhir.ttl>	<http://www.w3.org/2000/01/rdf-schema#label>	"FHIR Model Ontology"
+<http://hl7.org/fhir/fhir.ttl>	<http://www.w3.org/2002/07/owl#versionIRI>	<http://hl7.org/fhir/STU3/fhir.ttl>

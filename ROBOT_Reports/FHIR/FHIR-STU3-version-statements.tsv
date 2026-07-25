@@ -1,0 +1,2 @@
+?subject	?property	?value
+<http://hl7.org/fhir/fhir.ttl>	<http://www.w3.org/2002/07/owl#versionIRI>	<http://hl7.org/fhir/STU3/fhir.ttl>
