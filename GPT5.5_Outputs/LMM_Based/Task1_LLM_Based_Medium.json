@@ -1,0 +1,163 @@
+{
+  "task": "general_ontology_flaw_detection",
+  "model": "GPT-5.5 Medium",
+  "input_condition": "llm_only",
+  "findings": [
+    {
+      "id": "F1",
+      "entity": [
+        "http://purl.obolibrary.org/obo/DDO.owl#DDO_0001703",
+        "http://purl.obolibrary.org/obo/DDO.owl#DDO_0003244",
+        "http://purl.obolibrary.org/obo/DDO.owl#DDO_0005335"
+      ],
+      "entity_type": "Class",
+      "flaw_category": "Invalid datatype on human-readable label",
+      "error_type": "error",
+      "severity": "important",
+      "evidence": "RDF/XML: line 65222 has <rdfs:label rdf:datatype=\"http://www.w3.org/2001/XMLSchema#integer\">acute hepatitis B with hepatitis D</rdfs:label>; line 81590 has <rdfs:label rdf:datatype=\"http://www.w3.org/2001/XMLSchema#integer\">acute hepatic failure</rdfs:label>; line 97053 has <rdfs:label rdf:datatype=\"http://www.w3.org/2001/XMLSchema#integer\">pitavastatin</rdfs:label>. RDF parser diagnostics also reported invalid xsd:integer lexical forms for these three literals.",
+      "explanation": "The ontology assigns xsd:integer to rdfs:label literals whose lexical values are ordinary text. These literals are ill-typed and can cause parser warnings, failed datatype validation, inconsistent downstream indexing, and unreliable label display.",
+      "suggested_fix": "Use a string-compatible label representation for human-readable labels, such as plain language-tagged labels or string literals, and reserve xsd:integer for genuinely numeric values.",
+      "confidence": 1.0,
+      "additional_comment": "Task elapsed time was approximately 95 seconds."
+    },
+    {
+      "id": "F2",
+      "entity": [
+        "https://bioportal.bioontology.org/ontologies/FASTO/breath_holding",
+        "https://bioportal.bioontology.org/ontologies/FASTO/fetal_anemia",
+        "https://bioportal.bioontology.org/ontologies/FASTO/jarring",
+        "https://bioportal.bioontology.org/ontologies/FASTO/normal_weight",
+        "https://bioportal.bioontology.org/ontologies/FASTO/overweight",
+        "https://bioportal.bioontology.org/ontologies/FASTO/severe_obesity",
+        "https://bioportal.bioontology.org/ontologies/FASTO/underweight",
+        "https://bioportal.bioontology.org/ontologies/FTDM.owl#pramlintide",
+        "https://bioportal.bioontology.org/ontologies/FTDM/MLC815"
+      ],
+      "entity_type": "Multiple",
+      "flaw_category": "Class/individual punning with self-instantiation pattern",
+      "error_type": "warning",
+      "severity": "important",
+      "evidence": "RDF/XML examples: breath_holding is declared as an owl:Class at lines 108297-108299 and as an owl:NamedIndividual at lines 128242-128245, where the individual has rdf:type FASTO/breath_holding. Similar class plus named-individual declarations occur for fetal_anemia at lines 108581-108583 and 128301-128304, jarring at lines 108643-108645 and 128457-128460, normal_weight at lines 108761-108763 and 128740-128743, severe_obesity at lines 108920-108922 and 129049-129052, underweight at lines 108944-108946 and 129134-129137, FTDM.owl#pramlintide at lines 126143-126145 and 129267-129269, and FTDM/MLC815 at lines 126819-126821 and 129299-129302. The verbalizer also shows representative cases, e.g., overweight type a class, type a named individual, and type an overweight.",
+      "explanation": "The same IRI is used both as a class and as a named individual, and several of these individuals are explicitly typed by the class with the same IRI. OWL 2 punning can be syntactically legal, but this pattern creates two different semantic interpretations for the same identifier and can confuse querying, verbalization, validation, and maintenance.",
+      "suggested_fix": "Separate class identifiers from individual identifiers unless metamodeling is intentionally required and documented. Use distinct IRIs and clear naming conventions for categories versus their instances.",
+      "confidence": 0.97,
+      "additional_comment": "This finding is about the repeated modeling pattern, not about normal subclass specialization."
+    },
+    {
+      "id": "F3",
+      "entity": "Multiple rdfs:label annotations across distinct entities; a programmatic scan of the RDF/XML found 427 duplicate label lexical forms assigned to more than one entity.",
+      "entity_type": "Multiple",
+      "flaw_category": "Duplicate preferred labels on distinct ontology entities",
+      "error_type": "warning",
+      "severity": "important",
+      "evidence": "RDF/XML examples: DDO_0000557, DDO_0000583, DDO_0000603, DDO_0000608, and DDO_0000611 all carry the label 'acute gonococcal urethritis' at lines 52726-52731, 53013-53017, 53238-53242, 53293-53297, and 53326-53330. FTDM.owl#DMTO_0000460, DMTO_0000479, and DMTO_0000483 all carry 'Conjunctival Arteriolar Vasoconstriction' at lines 112884-112886, 113053-113057, and 113089-113093. FTDM.owl#DMTO_0000466 and DMTO_0000498 both carry 'Renal Arteriolar Vasoconstriction' at lines 112936-112940 and 113224-113228. The scan found 427 such duplicate rdfs:label lexical values.",
+      "explanation": "Distinct classes and properties sharing the same primary label are hard to distinguish in user interfaces, search indexes, mappings, rule authoring, and manual curation. Some duplicates may be deliberate synonyms or alternate placements, but as rdfs:label they function as primary names and create ambiguity unless explicitly documented or disambiguated.",
+      "suggested_fix": "Audit duplicate rdfs:label values. Where entities are genuinely equivalent, align or merge them; where they are different, add disambiguating labels and move repeated surface forms to synonym or alternate-label annotations as appropriate.",
+      "confidence": 0.92,
+      "additional_comment": "The finding is aggregated because the repeated issue is duplicate labeling, not each individual duplicate label occurrence."
+    },
+    {
+      "id": "F4",
+      "entity": [
+        "xml:base http://www.semanticweb.org/shaker/ontologies/2018/9/untitled-ontology-475",
+        "owl:Ontology https://bioportal.bioontology.org/ontologies/FASTO.owl"
+      ],
+      "entity_type": "Ontology",
+      "flaw_category": "Ontology IRI and XML base mismatch",
+      "error_type": "warning",
+      "severity": "minor",
+      "evidence": "RDF/XML line 2 sets xml:base=\"http://www.semanticweb.org/shaker/ontologies/2018/9/untitled-ontology-475\" while line 35 declares <owl:Ontology rdf:about=\"https://bioportal.bioontology.org/ontologies/FASTO.owl\"> and line 36 sets versionIRI to https://bioportal.bioontology.org/ontologies/FASTO.owl/1.0.",
+      "explanation": "The document base still points to an 'untitled-ontology' development IRI while the ontology IRI and version IRI use the BioPortal FASTO namespace. This mismatch can confuse relative IRI resolution, provenance, publishing workflows, and maintainers trying to identify the authoritative ontology identity.",
+      "suggested_fix": "Align the XML base with the published ontology IRI policy, or remove reliance on a development-time base if all ontology IRIs are intended to be absolute FASTO IRIs.",
+      "confidence": 0.95,
+      "additional_comment": "No claim is made that this alone changes existing absolute IRIs; the issue is an identity and maintainability risk."
+    },
+    {
+      "id": "F5",
+      "entity": [
+        "http://www.w3.org/ns/ssn/measurmentCapability",
+        "http://www.w3.org/ns/ssn/measurmentProperty",
+        "http://www.w3.org/ns/ssn/hasMeasurmentProperty",
+        "http://www.w3.org/ns/ssn/measurmentRange",
+        "https://bioportal.bioontology.org/ontologies/FASTO/hasPreferedBGUoM",
+        "https://bioportal.bioontology.org/ontologies/FTDM/hasPreferedInsulinRegimen",
+        "http://hl7.org/fhir/listOfNotPreferedFoods",
+        "http://hl7.org/fhir/listOfPreferedFoods",
+        "https://bioportal.bioontology.org/ontologies/FTDM/isPragnant",
+        "https://bioportal.bioontology.org/ontologies/FTDM.owl#drugContradictDithDisease",
+        "https://bioportal.bioontology.org/ontologies/FTDM.owl#exerciseContradicteWithDisease"
+      ],
+      "entity_type": "Multiple",
+      "flaw_category": "Misspelled or inconsistent entity identifiers",
+      "error_type": "warning",
+      "severity": "minor",
+      "evidence": "RDF/XML examples: ssn:forProperty uses ssn/measurmentCapability at line 6721; hasMeasurementCapability ranges over ssn/measurmentCapability at lines 6758-6762; hasMeasurementPropertyValue uses ssn/measurmentProperty at lines 6790-6794; the property hasMeasurmentProperty is declared at lines 6808-6810; hasPreferedBGUoM is declared at lines 8987-8989; hasPreferedInsulinRegimen is declared at lines 10437-10439; isPragnant is declared at lines 10513-10518 and asserted at line 128886; drugContradictDithDisease is declared at lines 7715-7721; exerciseContradicteWithDisease appears at lines 7749-7753; listOfNotPreferedFoods and listOfPreferedFoods are declared at lines 12655-12665.",
+      "explanation": "Several entity IRIs contain apparent spelling defects or inconsistent English forms. Identifier spelling errors are not OWL syntax errors, but they reduce readability, increase the risk of duplicate corrected entities being added later, and make mappings, queries, and application code more error-prone.",
+      "suggested_fix": "Normalize identifier spelling and naming conventions in a controlled migration. Preserve backward compatibility with deprecation annotations, replacement pointers, and documented mappings where existing IRIs are already published.",
+      "confidence": 0.9,
+      "additional_comment": "The evidence is based on the literal identifiers in the authoritative RDF/XML; the verbalizer was not needed for this finding."
+    },
+    {
+      "id": "F6",
+      "entity": "https://bioportal.bioontology.org/ontologies/FASTO.owl",
+      "entity_type": "Ontology",
+      "flaw_category": "External ontology content embedded without explicit import declarations",
+      "error_type": "warning",
+      "severity": "important",
+      "evidence": "RDF/XML line 35 declares the FASTO ontology. Its definition says it is based on BFO, SSN, and HL7 FHIR at line 39. The RDF/XML contains declarations from multiple external namespaces, for example OntoFood Carbohydrates at lines 1210-1215, SSN frequency at lines 107364-107366, OAE classes at lines 738-747, and OGMS classes at lines 1102-1111. A direct scan of the RDF/XML found zero owl:imports declarations.",
+      "explanation": "The ontology includes or references substantial external-namespace content while not declaring owl:imports. This makes dependency boundaries unclear, complicates updates to upstream ontologies, and may cause consumers to treat copied or partial external axioms as authoritative FASTO-local content.",
+      "suggested_fix": "Define a clear import policy. Use explicit imports for external ontologies when their axioms are dependencies, and document any intentionally copied or locally curated external fragments with provenance and version information.",
+      "confidence": 0.86,
+      "additional_comment": "This is reported as a maintainability and provenance risk, not as an OWL syntax error."
+    },
+    {
+      "id": "F7",
+      "entity": "https://bioportal.bioontology.org/ontologies/FTDM.owl#drugContradictWithDrug",
+      "entity_type": "ObjectProperty",
+      "flaw_category": "Potentially over-strong property characteristics",
+      "error_type": "warning",
+      "severity": "minor",
+      "evidence": "RDF/XML lines 7725-7732 declare drugContradictWithDrug as an owl:ObjectProperty and also type it as owl:SymmetricProperty and owl:TransitiveProperty, with both domain and range set to FTDM.owl#DMTO_0000011 at lines 7733-7734. The verbalizer also shows drug contradiction assertions such as 'lantus drug contradict with drug a gatifloxacin'.",
+      "explanation": "A relation named as a drug-drug contradiction is modeled as both symmetric and transitive. Symmetry may be plausible for pairwise incompatibility, but transitivity can infer chains of contradictions that are not directly asserted. This is a modeling pitfall because a contradiction between A and B and another between B and C would imply A contradicts C.",
+      "suggested_fix": "Review whether transitivity is intended for this relation. If contradiction is pairwise, remove the transitive characteristic and model propagated risk or contraindication closure with a separate, explicitly documented relation or rule.",
+      "confidence": 0.68,
+      "additional_comment": "Confidence is lower because the ontology does not provide an explicit natural-language definition for the property in the cited RDF/XML fragment."
+    },
+    {
+      "id": "F8",
+      "entity": [
+        "https://bioportal.bioontology.org/ontologies/FTDM.owl#pramlintide",
+        "https://bioportal.bioontology.org/ontologies/FTDM/pramlintide",
+        "https://bioportal.bioontology.org/ontologies/FTDM.owl#aspart",
+        "https://bioportal.bioontology.org/ontologies/FTDM/aspart",
+        "https://bioportal.bioontology.org/ontologies/FTDM.owl#detemir",
+        "https://bioportal.bioontology.org/ontologies/FTDM/detemir",
+        "https://bioportal.bioontology.org/ontologies/FTDM.owl#glulisine",
+        "https://bioportal.bioontology.org/ontologies/FTDM/glulisine",
+        "https://bioportal.bioontology.org/ontologies/FTDM.owl#lispro",
+        "https://bioportal.bioontology.org/ontologies/FTDM/lispro"
+      ],
+      "entity_type": "Multiple",
+      "flaw_category": "Parallel namespace variants for closely related entities",
+      "error_type": "warning",
+      "severity": "important",
+      "evidence": "RDF/XML examples: FTDM.owl#pramlintide is declared as a class at lines 126143-126145 and as a named individual at lines 129267-129269, while FTDM/pramlintide is a separate named individual at lines 130841-130844 typed as FTDM.owl#pramlintide. Similar class/individual namespace splits appear for glulisine at lines 124910-124912 and 129885-129888, detemir at lines 124372-124374 and later FTDM/detemir values such as line 94713, and lispro at lines 125331-125333 with FTDM/lispro occurring as a separate local-name variant. A programmatic scan found same-local-name IRI pairs for aspart, detemir, glulisine, lispro, and pramlintide across FTDM.owl# and FTDM/ namespaces.",
+      "explanation": "The ontology uses two parallel FTDM namespace patterns for entities with the same local name, often with one used for a class and another for an individual. This can be a legitimate class/instance convention only if consistently documented, but here it combines with punning and same-name variants, making entity identity and query behavior fragile.",
+      "suggested_fix": "Document and enforce a namespace policy for classes and individuals. If both namespace forms are required, make their roles explicit with labels, comments, and mappings; otherwise consolidate to one canonical IRI pattern.",
+      "confidence": 0.83,
+      "additional_comment": "This is distinct from F2 because it concerns parallel namespace variants, not only reuse of one IRI as both class and individual."
+    }
+  ],
+  "global_comments": [
+    {
+      "comment": "The ontology-wide dependency/provenance risk is represented as finding F6 rather than repeated for each external namespace declaration.",
+      "evidence": "RDF/XML includes the FASTO ontology declaration at line 35, the dependency statement at line 39, external namespace class declarations such as lines 1210-1215, 738-747, 1102-1111, and 107364-107366, and no owl:imports declarations in a direct scan.",
+      "confidence": 0.86
+    },
+    {
+      "comment": "Approximate elapsed time needed for the task: 95 seconds.",
+      "evidence": "Measured during the current analysis and artifact-generation workflow.",
+      "confidence": 0.8
+    }
+  ]
+}

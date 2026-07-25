@@ -1,0 +1,31 @@
+{
+  "task": "general_ontology_flaw_detection",
+  "model": "GPT-5.5 Instant",
+  "input_condition": "llm_only",
+  "findings": [
+    {
+      "id": "F1",
+      "entity": [
+        "breath_holding",
+        "fetal_anemia",
+        "jarring",
+        "normal_weight",
+        "overweight",
+        "severe_obesity",
+        "underweight",
+        "pramlintide",
+        "MLC815"
+      ],
+      "entity_type": "Multiple",
+      "flaw_category": "Metamodeling / class-individual punning",
+      "error_type": "warning",
+      "severity": "important",
+      "evidence": "The RDF/XML declares the same resources as both owl:Class and owl:NamedIndividual.",
+      "explanation": "Using the same entities simultaneously as classes and named individuals increases modeling complexity and may reduce maintainability unless intentional.",
+      "suggested_fix": "Review whether each resource should represent only a class or only an individual, and retain dual typing only where it is explicitly intended.",
+      "confidence": 0.99,
+      "additional_comment": "Aggregated finding covering all detected occurrences."
+    }
+  ],
+  "global_comments": []
+}

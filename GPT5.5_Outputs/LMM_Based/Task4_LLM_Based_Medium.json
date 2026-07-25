@@ -1,0 +1,732 @@
+{
+  "task": "new_competency_question_generation_and_coverage_analysis",
+  "model": "GPT-5.5 Medium",
+  "input_condition": "llm_only",
+  "ontology": {
+    "name": "FASTO",
+    "scope_summary": "FASTO is an ontology for a mobile health clinical decision support system for type 1 diabetes monitoring and treatment. It integrates FHIR, SSN, BFO, and clinical-practice-guideline content to support semantically interoperable patient profiles, sensor observations, care plans, insulin regimens, diet, exercise, and education subplans."
+  },
+  "competency_questions": [
+    {
+      "id": "CQ1",
+      "question": "Can FASTO represent CGM-derived glycemic metrics for a patient, including time in range, time below range, time above range, glucose management indicator, coefficient of variation, mean glucose, and the percentage of active CGM wear time?",
+      "motivation": "Current standards use CGM metrics as first-class measures of glycemic status and as safety measures for insulin-treated people; this tests whether FASTO can model glycemic status beyond discrete blood glucose observations.",
+      "evidence": [
+        "FASTO_RDF.owl entity audit: FASTO contains Observation, Observation.component, Observation.component.valueQuantity, GlucoseLevelObservation, and sensor/device structures, but no entity names matching continuous glucose monitoring, CGM, time in range, time below range, time above range, glucose management indicator, coefficient of variation, or active CGM time.",
+        "ADA Standards of Care 2026, Section 6, Recommendation 6.1 and glycemic assessment text: glycemic status is assessed by A1C and/or CGM metrics such as TIR, TAR, and TBR; the same section lists mean glucose, GMI, coefficient of variation, and active CGM percentage.",
+        "ADA Standards of Care 2026, Section 7: diabetes technology includes CGM and AID systems that use CGM-informed algorithms."
+      ],
+      "related_topic": "CGM metrics",
+      "expected_answer_type": "classification",
+      "required_existing_entities": [
+        "ssn:GlucoseLevelObservation",
+        "ssn:observation",
+        "fhir:Observation.component",
+        "fhir:Observation.component.valueQuantity",
+        "fhir:Observation.effectiveDateTime"
+      ],
+      "suggested_new_entities": [
+        "ContinuousGlucoseMonitoringDevice",
+        "CGMMetric",
+        "TimeInRange",
+        "TimeBelowRange",
+        "TimeAboveRange",
+        "GlucoseManagementIndicator",
+        "GlucoseCoefficientOfVariation",
+        "CGMActiveWearTimePercentage"
+      ],
+      "sparql_translatable": "partly",
+      "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX fhir: <http://hl7.org/fhir/>\nPREFIX fasto: <https://bioportal.bioontology.org/ontologies/FASTO/>\nPREFIX ftdm: <https://bioportal.bioontology.org/ontologies/FTDM/>\nPREFIX ftdmowl: <https://bioportal.bioontology.org/ontologies/FTDM.owl#>\nPREFIX ddo: <http://purl.obolibrary.org/obo/DDO.owl#>\nPREFIX ssn: <http://www.w3.org/ns/ssn/>\nPREFIX ontofood: <http://www.owl-ontologies.com/OntoFood.owl#>\nSELECT ?observation ?component ?value WHERE {\n  ?observation a ssn:GlucoseLevelObservation .\n  OPTIONAL { ?observation fhir:Observation.component ?component . }\n  OPTIONAL { ?component fhir:Observation.component.valueQuantity ?value . }\n}",
+      "sparql_limitation": "The query can retrieve existing glucose observation components but cannot distinguish CGM-derived aggregate metrics because the corresponding metric entities are absent.",
+      "ontology_coverage": "partly_covered",
+      "coverage_evidence": "FASTO covers observations and glucose-level observations but does not appear to provide modeled CGM aggregate metrics or AID-specific CGM-derived outcome classes.",
+      "coverage_gap_type": "missing_entity",
+      "related_gap_or_update_need": "Add CGM metric classes and connect them to Observation or a CGM summary observation pattern, with measurement windows and units.",
+      "priority": "high",
+      "confidence": 0.86,
+      "additional_comment": ""
+    },
+    {
+      "id": "CQ2",
+      "question": "Can FASTO classify hypoglycemia events into Level 1, Level 2, and Level 3 hypoglycemia according to glucose thresholds and need for assistance?",
+      "motivation": "This tests whether FASTO can support current hypoglycemia risk assessment and event classification rather than only recording a generic hypoglycemia history.",
+      "evidence": [
+        "FASTO_RDF.owl entity audit: FASTO contains ftdmowl:Hypoglycemia and ftdm:hasHistoryOfHypoglycemia, but no entity names matching Level 1 hypoglycemia, Level 2 hypoglycemia, or Level 3 hypoglycemia.",
+        "ADA Standards of Care 2026, Section 6, Table 6.4: Level 1 is glucose <70 mg/dL and >=54 mg/dL, Level 2 is glucose <54 mg/dL, and Level 3 is a severe event requiring assistance regardless of glucose level.",
+        "Original competency question exclusion set: Q11 asks for child patients who have had hypoglycemia before; the present question asks for event classification and severity semantics, not prior occurrence."
+      ],
+      "related_topic": "Hypoglycemia classification",
+      "expected_answer_type": "classification",
+      "required_existing_entities": [
+        "ftdmowl:Hypoglycemia",
+        "ftdm:hasHistoryOfHypoglycemia",
+        "ssn:GlucoseLevelObservation",
+        "fhir:Observation.component.valueQuantity"
+      ],
+      "suggested_new_entities": [
+        "Level1Hypoglycemia",
+        "Level2Hypoglycemia",
+        "Level3Hypoglycemia",
+        "requiresAssistanceForRecovery",
+        "hypoglycemiaGlucoseThreshold"
+      ],
+      "sparql_translatable": "partly",
+      "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX fhir: <http://hl7.org/fhir/>\nPREFIX fasto: <https://bioportal.bioontology.org/ontologies/FASTO/>\nPREFIX ftdm: <https://bioportal.bioontology.org/ontologies/FTDM/>\nPREFIX ftdmowl: <https://bioportal.bioontology.org/ontologies/FTDM.owl#>\nPREFIX ddo: <http://purl.obolibrary.org/obo/DDO.owl#>\nPREFIX ssn: <http://www.w3.org/ns/ssn/>\nPREFIX ontofood: <http://www.owl-ontologies.com/OntoFood.owl#>\nSELECT ?patient ?hypoglycemia WHERE {\n  ?patient ftdm:hasHistoryOfHypoglycemia ?hypoglycemia .\n}",
+      "sparql_limitation": "The existing query can identify modeled hypoglycemia history but cannot classify event levels without new severity classes, threshold axioms, or an assistance-required relation.",
+      "ontology_coverage": "partly_covered",
+      "coverage_evidence": "FASTO includes a hypoglycemia concept and a history relation, but lacks the current level-based classification model.",
+      "coverage_gap_type": "missing_axiom",
+      "related_gap_or_update_need": "Add hypoglycemia severity subclasses with threshold criteria and an explicit relation for assistance-required severe events.",
+      "priority": "high",
+      "confidence": 0.9,
+      "additional_comment": ""
+    },
+    {
+      "id": "CQ3",
+      "question": "For each patient taking insulin or otherwise at high risk for hypoglycemia, can FASTO represent that glucagon is prescribed and that family, caregivers, school personnel, or other support persons know its location and administration procedure?",
+      "motivation": "This tests current emergency preparedness requirements for hypoglycemia, especially support-person education, beyond listing insulin regimens.",
+      "evidence": [
+        "FASTO_RDF.owl entity audit: FASTO contains medicationStatement, medicationRequest, diabetes education process, and educationRecord entities, but does not contain a simple glucagon medication entity; glucagon-related hits are GLP-1 or glucagon receptor concepts, not emergency glucagon treatment.",
+        "ADA Standards of Care 2026, Section 6, Recommendation 6.16: glucagon should be prescribed for all individuals taking insulin or at high risk for hypoglycemia, and family, caregivers, school personnel, and others should know its location and be educated on administration.",
+        "ADA Standards of Care 2026, Section 9, Recommendation 9.28 repeats glucagon prescribing and support-person education for insulin-treated individuals."
+      ],
+      "related_topic": "Glucagon prescribing and support-person education",
+      "expected_answer_type": "boolean",
+      "required_existing_entities": [
+        "http://hl7.org/fhir/medicationStatement",
+        "http://hl7.org/fhir/medicationRequest",
+        "ftdmowl:DMTO_0002073",
+        "fasto:educationRecord",
+        "ftdmowl:hasPatientMedication"
+      ],
+      "suggested_new_entities": [
+        "GlucagonRescueMedication",
+        "GlucagonPrescription",
+        "GlucagonLocationKnowledge",
+        "GlucagonAdministrationTraining",
+        "Caregiver",
+        "SchoolPersonnel",
+        "supportPersonForPatient"
+      ],
+      "sparql_translatable": "partly",
+      "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX fhir: <http://hl7.org/fhir/>\nPREFIX fasto: <https://bioportal.bioontology.org/ontologies/FASTO/>\nPREFIX ftdm: <https://bioportal.bioontology.org/ontologies/FTDM/>\nPREFIX ftdmowl: <https://bioportal.bioontology.org/ontologies/FTDM.owl#>\nPREFIX ddo: <http://purl.obolibrary.org/obo/DDO.owl#>\nPREFIX ssn: <http://www.w3.org/ns/ssn/>\nPREFIX ontofood: <http://www.owl-ontologies.com/OntoFood.owl#>\nSELECT ?patient ?medication WHERE {\n  ?patient ftdmowl:hasPatientMedication ?medication .\n}",
+      "sparql_limitation": "The query can retrieve patient medication links but cannot determine glucagon rescue prescribing or support-person training because those entities and relations are not modeled.",
+      "ontology_coverage": "partly_covered",
+      "coverage_evidence": "FASTO covers medications and education records generally but lacks emergency glucagon treatment and support-person competency modeling.",
+      "coverage_gap_type": "missing_entity",
+      "related_gap_or_update_need": "Add emergency glucagon medication classes and relations linking insulin-treated patients to prescriptions, glucagon location, trained support persons, and administration education.",
+      "priority": "high",
+      "confidence": 0.88,
+      "additional_comment": ""
+    },
+    {
+      "id": "CQ4",
+      "question": "Can FASTO represent the recommended initial treatment protocol for conscious hypoglycemia: oral glucose-containing carbohydrate, repeat treatment after 15 minutes if hypoglycemia persists, and avoidance of high-fat or high-protein foods for initial treatment?",
+      "motivation": "This tests whether FASTO can model hypoglycemia treatment procedures and temporal steps, not only hypoglycemia as a condition.",
+      "evidence": [
+        "FASTO_RDF.owl entity audit: FASTO contains Carbohydrates, carbohydrate, has_carbohydrate_per_meal, has_fat_per_meal, has_protein_per_meal, meal, and hypoglycemia entities, but no explicit oral glucose treatment protocol or 15-minute repeat interval entity was found by label/name audit.",
+        "ADA Standards of Care 2026, Section 6, Recommendation 6.15: treat hypoglycemia with glucose or glucose-containing carbohydrate, avoid foods or beverages high in fat and/or protein for initial treatment, and repeat after 15 minutes if hypoglycemia persists.",
+        "ADA Standards of Care 2026, Section 6 explanatory text: added fat may slow and prolong the glycemic response, and protein should not be used to treat hypoglycemia."
+      ],
+      "related_topic": "Hypoglycemia treatment protocol",
+      "expected_answer_type": "temporal",
+      "required_existing_entities": [
+        "ftdmowl:Hypoglycemia",
+        "ontofood:meal",
+        "ontofood:Carbohydrates",
+        "ftdmowl:DMTO_0002116",
+        "ftdmowl:DMTO_0002156",
+        "ftdmowl:DMTO_0002157"
+      ],
+      "suggested_new_entities": [
+        "OralGlucoseTreatment",
+        "InitialHypoglycemiaTreatment",
+        "RepeatHypoglycemiaTreatmentAfter15Minutes",
+        "avoidHighFatInitialHypoglycemiaTreatment",
+        "avoidHighProteinInitialHypoglycemiaTreatment",
+        "persistsAfterTreatment"
+      ],
+      "sparql_translatable": "no",
+      "sparql_query": "",
+      "sparql_limitation": "FASTO has food and macronutrient entities, but the protocol requires a treatment-plan/process model with temporal sequencing and conditional repetition; no existing treatment-protocol relation was identified.",
+      "ontology_coverage": "not_covered",
+      "coverage_evidence": "Generic nutrition entities exist, but the specific hypoglycemia treatment procedure and temporal repeat condition are absent.",
+      "coverage_gap_type": "insufficient_modeling",
+      "related_gap_or_update_need": "Model hypoglycemia treatment as an ordered care process with carbohydrate treatment, reassessment interval, and food-composition constraints.",
+      "priority": "high",
+      "confidence": 0.86,
+      "additional_comment": ""
+    },
+    {
+      "id": "CQ5",
+      "question": "Can FASTO identify patients with type 1 diabetes for whom fear of hypoglycemia is a documented barrier to achieving glycemic targets or well-being?",
+      "motivation": "Current evidence supports screening for fear of hypoglycemia as a barrier to glycemic target achievement and quality of life; this tests psychosocial coverage relevant to individualized management.",
+      "evidence": [
+        "FASTO_RDF.owl entity audit: FASTO contains OAE_0002096 fear AE and OAE_0000940 fear of needles AE, but no modeled fear-of-hypoglycemia screening question, Hypoglycemia Fear Survey, or barrier-to-target relation was found.",
+        "Talbo et al., Endocrine Practice 2026: recent guidelines recommend screening for fear of hypoglycemia; the study validates a one-item screening question and reports association with HbA1c target attainment and well-being.",
+        "ADA Standards of Care 2026, Section 6: glycemic goals should be individualized considering impaired awareness of hypoglycemia and individual considerations."
+      ],
+      "related_topic": "Fear of hypoglycemia",
+      "expected_answer_type": "entity_list",
+      "required_existing_entities": [
+        "ftdmowl:Hypoglycemia",
+        "ftdmowl:DMTO_0001661",
+        "fhir:Goal.target",
+        "fhir:Goal.status",
+        "http://purl.obolibrary.org/obo/OAE_0002096"
+      ],
+      "suggested_new_entities": [
+        "FearOfHypoglycemia",
+        "FearOfHypoglycemiaScreeningQuestion",
+        "HypoglycemiaFearSurveyScore",
+        "barrierToGlycemicTarget",
+        "hypoglycemiaConfidence"
+      ],
+      "sparql_translatable": "partly",
+      "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX fhir: <http://hl7.org/fhir/>\nPREFIX fasto: <https://bioportal.bioontology.org/ontologies/FASTO/>\nPREFIX ftdm: <https://bioportal.bioontology.org/ontologies/FTDM/>\nPREFIX ftdmowl: <https://bioportal.bioontology.org/ontologies/FTDM.owl#>\nPREFIX ddo: <http://purl.obolibrary.org/obo/DDO.owl#>\nPREFIX ssn: <http://www.w3.org/ns/ssn/>\nPREFIX ontofood: <http://www.owl-ontologies.com/OntoFood.owl#>\nSELECT ?patient ?goal ?status WHERE {\n  ?goal a ftdmowl:DMTO_0001661 .\n  OPTIONAL { ?goal fhir:Goal.subject ?patient . }\n  OPTIONAL { ?goal fhir:Goal.status ?status . }\n}",
+      "sparql_limitation": "The query can retrieve goal status patterns but cannot link failure or barriers to fear of hypoglycemia because those psychosocial constructs are not represented.",
+      "ontology_coverage": "partly_covered",
+      "coverage_evidence": "FASTO has goal structures and generic fear adverse-event terms, but lacks fear-of-hypoglycemia assessment and barrier semantics.",
+      "coverage_gap_type": "missing_entity",
+      "related_gap_or_update_need": "Add fear-of-hypoglycemia assessment entities and relations connecting screening results to glycemic targets, education, and treatment adjustment needs.",
+      "priority": "medium",
+      "confidence": 0.8,
+      "additional_comment": ""
+    },
+    {
+      "id": "CQ6",
+      "question": "Can FASTO distinguish pediatric type 1 diabetes care plans from adult care plans so that pediatric plans can encode age-appropriate and developmentally appropriate care rather than inheriting adult management assumptions?",
+      "motivation": "This tests life-stage-specific management semantics, a central update need because pediatric diabetes management cannot be directly derived from adult care.",
+      "evidence": [
+        "FASTO_RDF.owl entity audit: FASTO contains child, adult, oldAdult, patient, carePlan, carePlan activity, and goal entities.",
+        "ADA Standards of Care 2026, Section 14: management of diabetes in children and adolescents cannot simply be derived from adult care; epidemiology, developmental considerations, and therapy response differ, and children should receive age-appropriate and developmentally appropriate pediatric care.",
+        "FASTO paper: FASTO aims to provide personalized care plans, including insulin, diet, exercise, and education subplans, based on the complete patient profile."
+      ],
+      "related_topic": "Pediatric care plan differentiation",
+      "expected_answer_type": "classification",
+      "required_existing_entities": [
+        "ftdmowl:child",
+        "ftdmowl:adult",
+        "ftdmowl:oldAdult",
+        "ddo:DDO_0000111",
+        "ftdmowl:DMTO_0000044",
+        "fhir:CarePlan.activity",
+        "fhir:CarePlan.goal"
+      ],
+      "suggested_new_entities": [
+        "PediatricCarePlan",
+        "DevelopmentallyAppropriateCare",
+        "ageAppropriateCare",
+        "hasDevelopmentalStage",
+        "carePlanAppropriateForLifeStage"
+      ],
+      "sparql_translatable": "partly",
+      "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX fhir: <http://hl7.org/fhir/>\nPREFIX fasto: <https://bioportal.bioontology.org/ontologies/FASTO/>\nPREFIX ftdm: <https://bioportal.bioontology.org/ontologies/FTDM/>\nPREFIX ftdmowl: <https://bioportal.bioontology.org/ontologies/FTDM.owl#>\nPREFIX ddo: <http://purl.obolibrary.org/obo/DDO.owl#>\nPREFIX ssn: <http://www.w3.org/ns/ssn/>\nPREFIX ontofood: <http://www.owl-ontologies.com/OntoFood.owl#>\nSELECT ?patient ?carePlan ?activity ?goal WHERE {\n  ?patient a ftdmowl:child .\n  ?carePlan a ftdmowl:DMTO_0000044 .\n  OPTIONAL { ?carePlan fhir:CarePlan.activity ?activity . }\n  OPTIONAL { ?carePlan fhir:CarePlan.goal ?goal . }\n}",
+      "sparql_limitation": "The query can retrieve child patients and care-plan structures if populated, but cannot verify developmental appropriateness without additional life-stage-specific plan constraints.",
+      "ontology_coverage": "partly_covered",
+      "coverage_evidence": "Life-stage categories and care-plan entities exist, but there is no explicit pediatric-care-plan specialization or developmental-appropriateness relation.",
+      "coverage_gap_type": "missing_axiom",
+      "related_gap_or_update_need": "Add life-stage-specific care plan subclasses or constraints and relations for developmental stage and age-appropriate recommendations.",
+      "priority": "high",
+      "confidence": 0.87,
+      "additional_comment": ""
+    },
+    {
+      "id": "CQ7",
+      "question": "Can FASTO represent that glycemic status assessment frequency should increase during rapid growth and development in children and adolescents, and for recent treatment changes or frequent/severe hypoglycemia or hyperglycemia?",
+      "motivation": "This tests whether FASTO can encode temporal monitoring frequency conditions tied to pediatric development and treatment-risk states.",
+      "evidence": [
+        "FASTO_RDF.owl entity audit: FASTO contains child, observation, HbA1C goal, has_3_months_A1C_level, hypoglycemia, and hyperglycemia-related disease terms, but no modeled monitoring-frequency rule for rapid growth or development was found.",
+        "ADA Standards of Care 2026, Section 6, Recommendation 6.2: assess glycemic status at least twice yearly and more frequently, e.g. every 3 months, for individuals not meeting goals, recent treatment changes, frequent/severe hypoglycemia or hyperglycemia, health-status changes, or rapid growth and development in children and adolescents.",
+        "ADA Standards of Care 2026, Section 14: pediatric care requires developmentally appropriate care and differs from adult care."
+      ],
+      "related_topic": "Pediatric glycemic monitoring frequency",
+      "expected_answer_type": "temporal",
+      "required_existing_entities": [
+        "ftdmowl:child",
+        "fhir:Observation.effectiveDateTime",
+        "ftdmowl:has_3_months_A1C_level",
+        "ftdmowl:Hypoglycemia",
+        "fhir:Goal.status"
+      ],
+      "suggested_new_entities": [
+        "RapidGrowthAndDevelopment",
+        "GlycemicAssessmentFrequency",
+        "recentTreatmentChange",
+        "frequentHypoglycemia",
+        "severeHypoglycemia",
+        "frequentHyperglycemia",
+        "moreFrequentGlycemicAssessmentIndication"
+      ],
+      "sparql_translatable": "partly",
+      "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX fhir: <http://hl7.org/fhir/>\nPREFIX fasto: <https://bioportal.bioontology.org/ontologies/FASTO/>\nPREFIX ftdm: <https://bioportal.bioontology.org/ontologies/FTDM/>\nPREFIX ftdmowl: <https://bioportal.bioontology.org/ontologies/FTDM.owl#>\nPREFIX ddo: <http://purl.obolibrary.org/obo/DDO.owl#>\nPREFIX ssn: <http://www.w3.org/ns/ssn/>\nPREFIX ontofood: <http://www.owl-ontologies.com/OntoFood.owl#>\nSELECT ?patient ?a1c WHERE {\n  ?patient a ftdmowl:child .\n  OPTIONAL { ?patient ftdmowl:has_3_months_A1C_level ?a1c . }\n}",
+      "sparql_limitation": "The query can retrieve child patients and a 3-month A1C value if present, but cannot infer monitoring-frequency requirements because the temporal indication model is absent.",
+      "ontology_coverage": "partly_covered",
+      "coverage_evidence": "FASTO has some pediatric and A1C entities but lacks conditional temporal monitoring rules for rapid growth, treatment changes, and severe/frequent hypo- or hyperglycemia.",
+      "coverage_gap_type": "missing_axiom",
+      "related_gap_or_update_need": "Add monitoring-frequency entities and SWRL or OWL-compatible rule patterns for pediatric development and treatment-risk conditions.",
+      "priority": "high",
+      "confidence": 0.85,
+      "additional_comment": ""
+    },
+    {
+      "id": "CQ8",
+      "question": "Can FASTO support annual screening of older adults with diabetes for geriatric syndromes, hypoglycemia, and polypharmacy, and relate those findings to individualized goals and therapeutic approaches?",
+      "motivation": "This tests whether older-adult management can represent geriatric domains and screening periodicity.",
+      "evidence": [
+        "FASTO_RDF.owl entity audit: FASTO contains oldAdult, hypoglycemia, depression-related disease entities, patient, carePlan, and goals, but no labels/entities for frailty or polypharmacy were found.",
+        "ADA Standards of Care 2026, Section 13, Recommendations 13.1 and 13.2: assess medical, psychological, functional, and social domains to determine goals and therapy; screen at least annually for geriatric syndromes including cognitive impairment, depression, urinary incontinence, falls, persistent pain, frailty, hypoglycemia, and polypharmacy.",
+        "ADA Standards of Care 2026, Section 13: older adults with diabetes are heterogeneous, and treatment concerns include fear of hypoglycemia, polypharmacy, and financial barriers."
+      ],
+      "related_topic": "Older adult screening and individualized goals",
+      "expected_answer_type": "temporal",
+      "required_existing_entities": [
+        "ftdmowl:oldAdult",
+        "ftdmowl:Hypoglycemia",
+        "ddo:DDO_0000111",
+        "ftdmowl:DMTO_0000044",
+        "ftdmowl:DMTO_0001661"
+      ],
+      "suggested_new_entities": [
+        "GeriatricSyndromeScreening",
+        "Polypharmacy",
+        "Frailty",
+        "FallRisk",
+        "CognitiveImpairment",
+        "FunctionalStatusAssessment",
+        "AnnualScreeningFrequency",
+        "treatmentBurden"
+      ],
+      "sparql_translatable": "partly",
+      "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX fhir: <http://hl7.org/fhir/>\nPREFIX fasto: <https://bioportal.bioontology.org/ontologies/FASTO/>\nPREFIX ftdm: <https://bioportal.bioontology.org/ontologies/FTDM/>\nPREFIX ftdmowl: <https://bioportal.bioontology.org/ontologies/FTDM.owl#>\nPREFIX ddo: <http://purl.obolibrary.org/obo/DDO.owl#>\nPREFIX ssn: <http://www.w3.org/ns/ssn/>\nPREFIX ontofood: <http://www.owl-ontologies.com/OntoFood.owl#>\nSELECT ?patient ?goal ?carePlan WHERE {\n  ?patient a ftdmowl:oldAdult .\n  OPTIONAL { ?carePlan fhir:CarePlan.goal ?goal . }\n}",
+      "sparql_limitation": "The query can identify older-adult patients and related goals only if data are present; it cannot check annual geriatric screening because required screening entities and periodicity relations are missing.",
+      "ontology_coverage": "partly_covered",
+      "coverage_evidence": "FASTO covers age category and care goals, but lacks geriatric-syndrome and polypharmacy screening semantics.",
+      "coverage_gap_type": "missing_entity",
+      "related_gap_or_update_need": "Add older-adult screening entities, annual frequency constraints, and relations from screening findings to individualized care goals and therapy choices.",
+      "priority": "high",
+      "confidence": 0.88,
+      "additional_comment": ""
+    },
+    {
+      "id": "CQ9",
+      "question": "Can FASTO represent that most adults with type 1 diabetes should be treated with continuous subcutaneous insulin infusion or multiple daily doses of basal plus prandial insulin, including injected or inhaled prandial insulin?",
+      "motivation": "This tests whether current insulin-delivery modalities, including inhaled prandial insulin and CSII, are captured for adult type 1 diabetes treatment planning.",
+      "evidence": [
+        "FASTO_RDF.owl entity audit: FASTO contains adult, type_1_diabetes_mellitus_condition, basal and bolus insulin properties, rapid-acting insulin individuals such as aspart/lispro/glulisine, and some insulin regimen structures; no CGM/AID/pump or inhaled insulin treatment class for type 1 diabetes was found except unrelated inhaled albuterol.",
+        "ADA Standards of Care 2026, Section 9, Recommendation 9.1: treat most adults with type 1 diabetes with continuous subcutaneous insulin infusion or multiple daily doses of prandial, injected or inhaled, and basal insulin.",
+        "ADA Standards of Care 2026, Section 9, Figure 9.1: inhaled insulin may be used in place of injectable prandial insulin in the U.S."
+      ],
+      "related_topic": "Adult type 1 diabetes insulin delivery modality",
+      "expected_answer_type": "classification",
+      "required_existing_entities": [
+        "ftdmowl:adult",
+        "ftdm:type_1_diabetes_mellitus_condition",
+        "ftdmowl:hasBasalInsulin",
+        "ftdmowl:hasBolusInsulin",
+        "ftdm:aspart",
+        "ftdm:lispro",
+        "ftdm:glulisine"
+      ],
+      "suggested_new_entities": [
+        "ContinuousSubcutaneousInsulinInfusion",
+        "MultipleDailyInjectionPlan",
+        "PrandialInhaledInsulin",
+        "BasalPrandialInsulinPlan",
+        "insulinDeliveryModality"
+      ],
+      "sparql_translatable": "partly",
+      "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX fhir: <http://hl7.org/fhir/>\nPREFIX fasto: <https://bioportal.bioontology.org/ontologies/FASTO/>\nPREFIX ftdm: <https://bioportal.bioontology.org/ontologies/FTDM/>\nPREFIX ftdmowl: <https://bioportal.bioontology.org/ontologies/FTDM.owl#>\nPREFIX ddo: <http://purl.obolibrary.org/obo/DDO.owl#>\nPREFIX ssn: <http://www.w3.org/ns/ssn/>\nPREFIX ontofood: <http://www.owl-ontologies.com/OntoFood.owl#>\nSELECT ?patient ?basal ?bolus WHERE {\n  ?patient a ftdmowl:adult .\n  OPTIONAL { ?patient ftdmowl:hasBasalInsulin ?basal . }\n  OPTIONAL { ?patient ftdmowl:hasBolusInsulin ?bolus . }\n}",
+      "sparql_limitation": "The query can inspect basal and bolus insulin relations but cannot distinguish CSII, MDI, or inhaled prandial insulin if those delivery-modality entities are absent.",
+      "ontology_coverage": "partly_covered",
+      "coverage_evidence": "FASTO models several insulin drugs and regimen properties but lacks full current insulin-delivery modality coverage.",
+      "coverage_gap_type": "missing_entity",
+      "related_gap_or_update_need": "Add CSII, MDI, and inhaled-prandial-insulin concepts and connect them to adult type 1 diabetes treatment plans.",
+      "priority": "medium",
+      "confidence": 0.82,
+      "additional_comment": ""
+    },
+    {
+      "id": "CQ10",
+      "question": "Can FASTO represent mealtime insulin dose adjustment based on carbohydrate intake, fat and protein intake, concurrent glycemia, glycemic trends, sick-day management, and anticipated physical activity?",
+      "motivation": "This tests whether FASTO can support current individualized bolus/correction-dose education rather than only carbohydrate-counting and exercise recommendations.",
+      "evidence": [
+        "FASTO_RDF.owl entity audit: FASTO contains hasInsulinToCarbohydrateRatio, Meal.insulinUnitsForCarbs, Meal.correctionInsulinUnits, Meal.insulinUnitsForExercise, has_carbohydrate_per_meal, has_fat_per_meal, has_protein_per_meal, and exercise-plan properties; no sick-day-management or glycemic-trend entity was found.",
+        "ADA Standards of Care 2026, Section 9, Recommendation 9.3: adults with type 1 diabetes should be educated to match mealtime insulin to carbohydrate and fat/protein intake and to modify correction doses based on concurrent glycemia, glycemic trends, sick-day management, and anticipated physical activity.",
+        "FASTO paper abstract: FASTO supports mealtime carbohydrate calculations and real-time insulin adjustments."
+      ],
+      "related_topic": "Mealtime insulin adjustment education",
+      "expected_answer_type": "relation_path",
+      "required_existing_entities": [
+        "ftdmowl:hasInsulinToCarbohydrateRatio",
+        "fasto:Meal.insulinUnitsForCarbs",
+        "fasto:Meal.correctionInsulinUnits",
+        "fasto:Meal.insulinUnitsForExercise",
+        "ftdmowl:DMTO_0002116",
+        "ftdmowl:DMTO_0002156",
+        "ftdmowl:DMTO_0002157",
+        "fasto:exercisePlan.component.exerciseType"
+      ],
+      "suggested_new_entities": [
+        "GlycemicTrend",
+        "SickDayManagement",
+        "anticipatedPhysicalActivity",
+        "mealtimeDoseAdjustmentRule",
+        "fatProteinBolusAdjustment"
+      ],
+      "sparql_translatable": "partly",
+      "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX fhir: <http://hl7.org/fhir/>\nPREFIX fasto: <https://bioportal.bioontology.org/ontologies/FASTO/>\nPREFIX ftdm: <https://bioportal.bioontology.org/ontologies/FTDM/>\nPREFIX ftdmowl: <https://bioportal.bioontology.org/ontologies/FTDM.owl#>\nPREFIX ddo: <http://purl.obolibrary.org/obo/DDO.owl#>\nPREFIX ssn: <http://www.w3.org/ns/ssn/>\nPREFIX ontofood: <http://www.owl-ontologies.com/OntoFood.owl#>\nSELECT ?meal ?carbs ?fat ?protein ?carbInsulin ?correction ?exerciseInsulin WHERE {\n  OPTIONAL { ?meal ftdmowl:DMTO_0002116 ?carbs . }\n  OPTIONAL { ?meal ftdmowl:DMTO_0002156 ?fat . }\n  OPTIONAL { ?meal ftdmowl:DMTO_0002157 ?protein . }\n  OPTIONAL { ?meal fasto:Meal.insulinUnitsForCarbs ?carbInsulin . }\n  OPTIONAL { ?meal fasto:Meal.correctionInsulinUnits ?correction . }\n  OPTIONAL { ?meal fasto:Meal.insulinUnitsForExercise ?exerciseInsulin . }\n}",
+      "sparql_limitation": "The query can retrieve existing meal nutrient and insulin-unit fields, but cannot model glycemic trends, sick-day context, or an explicit dose-adjustment rule.",
+      "ontology_coverage": "partly_covered",
+      "coverage_evidence": "FASTO partially covers meal nutrients and insulin calculation fields but lacks trend and sick-day adjustment semantics.",
+      "coverage_gap_type": "missing_relation",
+      "related_gap_or_update_need": "Add relations for glycemic trend, sick-day management, anticipated activity, and explicit bolus/correction-dose rule provenance.",
+      "priority": "high",
+      "confidence": 0.9,
+      "additional_comment": ""
+    },
+    {
+      "id": "CQ11",
+      "question": "Can FASTO model automated insulin delivery systems as devices that integrate an insulin pump, CGM, and an algorithm to modulate insulin delivery, and represent caregiver skill/preference as part of device selection when the patient is a young child or otherwise dependent?",
+      "motivation": "This tests current diabetes technology coverage, including AID architecture and caregiver-mediated decision-making.",
+      "evidence": [
+        "FASTO_RDF.owl entity audit: FASTO contains SSN device/sensingDevice, FHIR Device properties, and sensor observation structures, but no AID, automated insulin delivery, CGM, insulin pump, connected insulin pen, caregiver, preference, or algorithm entities were found by label/name audit.",
+        "ADA Standards of Care 2026, Section 7: diabetes technology includes AID systems that use CGM-informed algorithms to modulate insulin delivery.",
+        "ADA Standards of Care 2026, Section 7, Recommendation 7.2: device selection should be individualized, and caregiver skills and preferences are integral when diabetes is managed by someone else, such as for a young child or person with cognitive or physical limitations."
+      ],
+      "related_topic": "Automated insulin delivery and caregiver-mediated device selection",
+      "expected_answer_type": "relation_path",
+      "required_existing_entities": [
+        "ssn:device",
+        "ssn:sensingDevice",
+        "fhir:Device.type",
+        "fhir:Device.status",
+        "ftdmowl:child"
+      ],
+      "suggested_new_entities": [
+        "AutomatedInsulinDeliverySystem",
+        "InsulinPump",
+        "ContinuousGlucoseMonitor",
+        "DoseModulationAlgorithm",
+        "Caregiver",
+        "caregiverSkill",
+        "caregiverPreference",
+        "deviceSelectionCriterion"
+      ],
+      "sparql_translatable": "partly",
+      "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX fhir: <http://hl7.org/fhir/>\nPREFIX fasto: <https://bioportal.bioontology.org/ontologies/FASTO/>\nPREFIX ftdm: <https://bioportal.bioontology.org/ontologies/FTDM/>\nPREFIX ftdmowl: <https://bioportal.bioontology.org/ontologies/FTDM.owl#>\nPREFIX ddo: <http://purl.obolibrary.org/obo/DDO.owl#>\nPREFIX ssn: <http://www.w3.org/ns/ssn/>\nPREFIX ontofood: <http://www.owl-ontologies.com/OntoFood.owl#>\nSELECT ?device ?type ?status WHERE {\n  ?device a ssn:device .\n  OPTIONAL { ?device fhir:Device.type ?type . }\n  OPTIONAL { ?device fhir:Device.status ?status . }\n}",
+      "sparql_limitation": "The query can inspect generic devices but cannot identify AID components or caregiver decision factors without additional device and preference modeling.",
+      "ontology_coverage": "partly_covered",
+      "coverage_evidence": "FASTO covers sensors/devices generally but lacks current AID-system composition and caregiver-selection semantics.",
+      "coverage_gap_type": "missing_entity",
+      "related_gap_or_update_need": "Add AID, CGM, insulin pump, algorithm, connected pen, and caregiver preference/skill entities with device-composition relations.",
+      "priority": "high",
+      "confidence": 0.88,
+      "additional_comment": ""
+    },
+    {
+      "id": "CQ12",
+      "question": "Can FASTO represent adverse events and patient-reported outcomes associated with advanced hybrid closed-loop systems, such as severe hypoglycemia, ketoacidosis, skin problems from adhesives or infusion sets, and treatment satisfaction?",
+      "motivation": "This tests whether FASTO can assess safety and user-experience evidence for current AID/AHCL technologies.",
+      "evidence": [
+        "FASTO_RDF.owl entity audit: FASTO contains fhir:adverseEvent, AdverseEvent.reaction, OAE adverse-event classes, hypoglycemia, diabetic ketoacidosis, and device adverse-event terms; no advanced hybrid closed-loop system, treatment satisfaction, or adhesive/infusion-set skin problem class was identified by name audit.",
+        "Singh et al., Journal of Diabetes Science and Technology 2025: AHCL systems improved glucose control and treatment satisfaction; four severe hypoglycemia events, no ketoacidosis, and skin problems in 32.4% were reported.",
+        "Sherr et al., Diabetes Care 2026: severe hypoglycemic events and impaired awareness persisted despite high CGM and AID use, supporting safety outcomes beyond technology adoption."
+      ],
+      "related_topic": "AHCL safety and patient-reported outcomes",
+      "expected_answer_type": "entity_list",
+      "required_existing_entities": [
+        "http://hl7.org/fhir/adverseEvent",
+        "fhir:AdverseEvent.reaction",
+        "ftdmowl:Hypoglycemia",
+        "ddo:DDO_0000222",
+        "http://purl.obolibrary.org/obo/OAE_0000006"
+      ],
+      "suggested_new_entities": [
+        "AdvancedHybridClosedLoopSystem",
+        "TreatmentSatisfactionScore",
+        "AdhesiveSkinProblem",
+        "InfusionSetSkinProblem",
+        "SevereHypoglycemiaEvent",
+        "AIDAssociatedAdverseEvent"
+      ],
+      "sparql_translatable": "partly",
+      "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX fhir: <http://hl7.org/fhir/>\nPREFIX fasto: <https://bioportal.bioontology.org/ontologies/FASTO/>\nPREFIX ftdm: <https://bioportal.bioontology.org/ontologies/FTDM/>\nPREFIX ftdmowl: <https://bioportal.bioontology.org/ontologies/FTDM.owl#>\nPREFIX ddo: <http://purl.obolibrary.org/obo/DDO.owl#>\nPREFIX ssn: <http://www.w3.org/ns/ssn/>\nPREFIX ontofood: <http://www.owl-ontologies.com/OntoFood.owl#>\nSELECT ?event ?reaction ?subject WHERE {\n  ?event a fhir:adverseEvent .\n  OPTIONAL { ?event fhir:AdverseEvent.reaction ?reaction . }\n  OPTIONAL { ?event fhir:AdverseEvent.subject ?subject . }\n}",
+      "sparql_limitation": "The query retrieves generic adverse events only; AHCL device type and patient-reported outcome constructs require new entities.",
+      "ontology_coverage": "partly_covered",
+      "coverage_evidence": "Adverse-event infrastructure exists, but AHCL-specific safety and satisfaction constructs are under-modeled.",
+      "coverage_gap_type": "missing_entity",
+      "related_gap_or_update_need": "Add AHCL/AID device classes, patient-reported outcome measures, and device-related skin-event subclasses.",
+      "priority": "medium",
+      "confidence": 0.84,
+      "additional_comment": ""
+    },
+    {
+      "id": "CQ13",
+      "question": "Can FASTO represent low-dose glucagon as a preventive or treatment option for exercise-associated hypoglycemia in adolescents and adults with type 1 diabetes, including efficacy outcomes and adverse events?",
+      "motivation": "This tests whether emerging evidence on exercise-associated hypoglycemia can be represented without conflating it with general exercise plans or generic hypoglycemia.",
+      "evidence": [
+        "FASTO_RDF.owl entity audit: FASTO contains exercise plan properties, hypoglycemia, adverseEvent, and some glucagon receptor/GLP concepts, but no emergency or low-dose glucagon medication entity was found.",
+        "Lundemose et al., Diabetes Care 2025 systematic review and meta-analysis: low-dose glucagon reduced exercise-induced hypoglycemia and time below range in adolescents and adults with type 1 diabetes, while adverse events increased in some studies.",
+        "Original competency question exclusion set: Q5 asks for patients prevented from exercise and Q8/Q10/Q17 concern insulin regimens; the present question is about exercise-associated hypoglycemia prevention/treatment using low-dose glucagon."
+      ],
+      "related_topic": "Exercise-associated hypoglycemia treatment",
+      "expected_answer_type": "other",
+      "required_existing_entities": [
+        "fasto:exercisePlan.component.exerciseType",
+        "fasto:exercisePlan.component.activityDuration",
+        "ftdmowl:Hypoglycemia",
+        "http://hl7.org/fhir/adverseEvent"
+      ],
+      "suggested_new_entities": [
+        "LowDoseGlucagon",
+        "ExerciseAssociatedHypoglycemia",
+        "preventsHypoglycemiaDuringExercise",
+        "treatsExerciseAssociatedHypoglycemia",
+        "timeBelowRangeOutcome",
+        "lowDoseGlucagonAdverseEvent"
+      ],
+      "sparql_translatable": "partly",
+      "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX fhir: <http://hl7.org/fhir/>\nPREFIX fasto: <https://bioportal.bioontology.org/ontologies/FASTO/>\nPREFIX ftdm: <https://bioportal.bioontology.org/ontologies/FTDM/>\nPREFIX ftdmowl: <https://bioportal.bioontology.org/ontologies/FTDM.owl#>\nPREFIX ddo: <http://purl.obolibrary.org/obo/DDO.owl#>\nPREFIX ssn: <http://www.w3.org/ns/ssn/>\nPREFIX ontofood: <http://www.owl-ontologies.com/OntoFood.owl#>\nSELECT ?exercisePart ?exerciseType ?duration WHERE {\n  ?exercisePart fasto:exercisePlan.component.exerciseType ?exerciseType .\n  OPTIONAL { ?exercisePart fasto:exercisePlan.component.activityDuration ?duration . }\n}",
+      "sparql_limitation": "The query can retrieve exercise-plan details but cannot connect exercise-associated hypoglycemia to low-dose glucagon treatment or outcomes.",
+      "ontology_coverage": "partly_covered",
+      "coverage_evidence": "FASTO has exercise and hypoglycemia coverage but lacks low-dose glucagon and exercise-associated hypoglycemia treatment/outcome semantics.",
+      "coverage_gap_type": "missing_entity",
+      "related_gap_or_update_need": "Add low-dose glucagon treatment entities, exercise-associated hypoglycemia subclasses, and efficacy/adverse-event outcome relations.",
+      "priority": "medium",
+      "confidence": 0.82,
+      "additional_comment": ""
+    },
+    {
+      "id": "CQ14",
+      "question": "Can FASTO represent presymptomatic type 1 diabetes monitoring using A1C approximately every 6 months, annual 75-g oral glucose tolerance testing, optional CGM metrics, and risk stratification by age and number/type of islet autoantibodies?",
+      "motivation": "This tests whether FASTO can model updated type 1 diabetes staging and monitoring needs before stage 3 overt disease.",
+      "evidence": [
+        "FASTO_RDF.owl entity audit: FASTO contains type 1 diabetes mellitus disease/condition, A1C, observation structures, patient age categories, and some family history structures, but no islet autoantibody, presymptomatic type 1 diabetes stage, or OGTT monitoring schedule entity was found by label/name audit.",
+        "ADA Standards of Care 2026, Section 3, Recommendation 3.2: in presymptomatic type 1 diabetes, monitor disease progression with A1C approximately every 6 months and 75-g OGTT annually, considering CGM metrics based on risk assessment incorporating age, number and type of autoantibodies, and glycemic metrics.",
+        "ADA Standards of Care 2026 Summary of Revisions: added or revised recommendations emphasize stage 3 evaluation and monitoring for single IA-2 autoantibody and other islet autoantibody scenarios."
+      ],
+      "related_topic": "Presymptomatic type 1 diabetes monitoring",
+      "expected_answer_type": "temporal",
+      "required_existing_entities": [
+        "ftdm:type_1_diabetes_mellitus_condition",
+        "ftdmowl:has_3_months_A1C_level",
+        "fhir:Observation.effectiveDateTime",
+        "ddo:DDO_0000111"
+      ],
+      "suggested_new_entities": [
+        "PresymptomaticType1Diabetes",
+        "Stage1Type1Diabetes",
+        "Stage2Type1Diabetes",
+        "Stage3Type1Diabetes",
+        "IsletAutoantibody",
+        "IA2Autoantibody",
+        "OralGlucoseToleranceTest75g",
+        "sixMonthA1CMonitoring",
+        "annualOGTTMonitoring"
+      ],
+      "sparql_translatable": "partly",
+      "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX fhir: <http://hl7.org/fhir/>\nPREFIX fasto: <https://bioportal.bioontology.org/ontologies/FASTO/>\nPREFIX ftdm: <https://bioportal.bioontology.org/ontologies/FTDM/>\nPREFIX ftdmowl: <https://bioportal.bioontology.org/ontologies/FTDM.owl#>\nPREFIX ddo: <http://purl.obolibrary.org/obo/DDO.owl#>\nPREFIX ssn: <http://www.w3.org/ns/ssn/>\nPREFIX ontofood: <http://www.owl-ontologies.com/OntoFood.owl#>\nSELECT ?patient ?a1c WHERE {\n  OPTIONAL { ?patient ftdmowl:has_3_months_A1C_level ?a1c . }\n}",
+      "sparql_limitation": "The query can retrieve an A1C-related value but cannot distinguish presymptomatic stages, autoantibody risk, OGTT, or monitoring intervals.",
+      "ontology_coverage": "partly_covered",
+      "coverage_evidence": "FASTO has diabetes and A1C terms but lacks current presymptomatic staging and autoantibody-based monitoring semantics.",
+      "coverage_gap_type": "missing_entity",
+      "related_gap_or_update_need": "Add presymptomatic T1D stages, islet autoantibody entities, OGTT monitoring entities, and temporal monitoring-frequency relations.",
+      "priority": "medium",
+      "confidence": 0.78,
+      "additional_comment": ""
+    },
+    {
+      "id": "CQ15",
+      "question": "Can FASTO represent sick-day or stressful-event management for ketosis-prone individuals, including more frequent glucose monitoring, urine or blood ketone monitoring, treatment reevaluation, and DKA risk mitigation?",
+      "motivation": "This tests whether FASTO can support acute illness management and hyperglycemic-crisis prevention.",
+      "evidence": [
+        "FASTO_RDF.owl entity audit: FASTO contains blood ketone, serum ketone, urine ketones, diabetic ketoacidosis, observation structures, and medication entities, but no sick-day-management entity or explicit ketosis-prone-patient relation was found.",
+        "ADA Standards of Care 2026, Section 6: individuals with diabetes experiencing illness or stressful events should be assessed for more frequent glucose monitoring; ketosis-prone individuals also require urine or blood ketone monitoring, and clinicians should reevaluate diabetes treatment.",
+        "ADA Standards of Care 2026, Section 9: individuals at risk for DKA and treated with SGLT inhibition should be educated on DKA signs, risk mitigation, and ketone measurement tools."
+      ],
+      "related_topic": "Sick-day and DKA risk mitigation",
+      "expected_answer_type": "temporal",
+      "required_existing_entities": [
+        "ddo:DDO_0000351",
+        "ddo:DDO_0000352",
+        "ddo:DDO_0000299",
+        "ddo:DDO_0000222",
+        "fhir:Observation.effectiveDateTime",
+        "http://hl7.org/fhir/medicationStatement"
+      ],
+      "suggested_new_entities": [
+        "SickDayManagement",
+        "StressfulEvent",
+        "KetosisPronePatient",
+        "DKARiskMitigationPlan",
+        "moreFrequentGlucoseMonitoring",
+        "ketoneMonitoringPlan",
+        "SGLTInhibition"
+      ],
+      "sparql_translatable": "partly",
+      "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX fhir: <http://hl7.org/fhir/>\nPREFIX fasto: <https://bioportal.bioontology.org/ontologies/FASTO/>\nPREFIX ftdm: <https://bioportal.bioontology.org/ontologies/FTDM/>\nPREFIX ftdmowl: <https://bioportal.bioontology.org/ontologies/FTDM.owl#>\nPREFIX ddo: <http://purl.obolibrary.org/obo/DDO.owl#>\nPREFIX ssn: <http://www.w3.org/ns/ssn/>\nPREFIX ontofood: <http://www.owl-ontologies.com/OntoFood.owl#>\nSELECT ?ketoneEntity WHERE {\n  VALUES ?ketoneEntity { ddo:DDO_0000351 ddo:DDO_0000352 ddo:DDO_0000299 ddo:DDO_0000222 }\n  ?ketoneEntity ?p ?o .\n}",
+      "sparql_limitation": "The query can inspect ketone and DKA entities but cannot represent sick-day context, monitoring frequency, or SGLT-associated risk mitigation.",
+      "ontology_coverage": "partly_covered",
+      "coverage_evidence": "FASTO includes ketone and DKA concepts but lacks acute illness and risk-mitigation process modeling.",
+      "coverage_gap_type": "missing_relation",
+      "related_gap_or_update_need": "Add sick-day/stressful-event management processes, ketosis-risk relations, ketone monitoring intervals, and DKA mitigation education links.",
+      "priority": "high",
+      "confidence": 0.84,
+      "additional_comment": ""
+    },
+    {
+      "id": "CQ16",
+      "question": "Can FASTO represent shared decision-making in diabetes treatment decisions using patient values, preferences, prognosis, comorbidities, social determinants of health, treatment burden, and informed financial considerations?",
+      "motivation": "This tests whether FASTO's personalized-care goal includes current person-centered and equity-oriented decision factors.",
+      "evidence": [
+        "FASTO_RDF.owl entity audit: FASTO contains patient, Patient.ethnicity, carePlan, practitioner, education cost, and nutrition education cost properties, but no general social determinants of health, financial barrier, prognosis, patient preference, or shared decision-making relation was identified.",
+        "ADA Standards of Care 2026, Section 1, Recommendation 1.1: treatment decisions should be timely, evidence-based, address social determinants of health, and incorporate shared decision-making based on values, preferences, prognoses, comorbidities, and informed financial considerations.",
+        "ADA Standards of Care 2026, Section 1, Recommendation 1.4: assessment should attend to individual values, preferences, goals for care, and treatment burden, including costs of care."
+      ],
+      "related_topic": "Person-centered shared decision-making",
+      "expected_answer_type": "relation_path",
+      "required_existing_entities": [
+        "ddo:DDO_0000111",
+        "ftdmowl:DMTO_0000044",
+        "http://hl7.org/fhir/Practitioner.role",
+        "http://hl7.org/fhir/Patient.ethnicity",
+        "ftdmowl:DMTO_0002075"
+      ],
+      "suggested_new_entities": [
+        "SharedDecisionMakingProcess",
+        "PatientPreference",
+        "PatientValue",
+        "Prognosis",
+        "SocialDeterminantOfHealth",
+        "FinancialConsideration",
+        "TreatmentBurden",
+        "CostOfCare"
+      ],
+      "sparql_translatable": "partly",
+      "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX fhir: <http://hl7.org/fhir/>\nPREFIX fasto: <https://bioportal.bioontology.org/ontologies/FASTO/>\nPREFIX ftdm: <https://bioportal.bioontology.org/ontologies/FTDM/>\nPREFIX ftdmowl: <https://bioportal.bioontology.org/ontologies/FTDM.owl#>\nPREFIX ddo: <http://purl.obolibrary.org/obo/DDO.owl#>\nPREFIX ssn: <http://www.w3.org/ns/ssn/>\nPREFIX ontofood: <http://www.owl-ontologies.com/OntoFood.owl#>\nSELECT ?patient ?carePlan ?ethnicity WHERE {\n  ?patient a ddo:DDO_0000111 .\n  OPTIONAL { ?carePlan a ftdmowl:DMTO_0000044 . }\n  OPTIONAL { ?patient fhir:Patient.ethnicity ?ethnicity . }\n}",
+      "sparql_limitation": "The query can retrieve patient and limited demographic/care-plan information, but cannot represent shared decision-making factors without new entities and relations.",
+      "ontology_coverage": "partly_covered",
+      "coverage_evidence": "FASTO supports patient profiles and care plans but under-models values, preferences, SDOH, prognosis, and financial burden.",
+      "coverage_gap_type": "insufficient_modeling",
+      "related_gap_or_update_need": "Extend patient-profile and care-plan models with shared-decision and SDOH constructs, distinguishing clinical data from preference and contextual data.",
+      "priority": "medium",
+      "confidence": 0.79,
+      "additional_comment": ""
+    },
+    {
+      "id": "CQ17",
+      "question": "Can FASTO represent dietary-pattern interventions for type 1 diabetes, especially high-fiber and carbohydrate-restricted patterns, and link them to outcomes such as HbA1c, time in range, coefficient of variation, hypoglycemia, insulin dose, and anthropometric measures?",
+      "motivation": "This tests whether FASTO can update nutrition coverage from food/meal composition to evidence-supported dietary-pattern interventions and outcome measures.",
+      "evidence": [
+        "FASTO_RDF.owl entity audit: FASTO contains meal, Carbohydrates, Fiber, has_fiber, has_carbohydrate_per_meal, total calories, body weight observation, and A1C entities, but no high-fiber diet, carbohydrate-restricted diet, dietary pattern, time in range, coefficient of variation, or intervention evidence constructs were found.",
+        "Zeng et al., eClinicalMedicine 2025 systematic review and meta-analysis: in type 1 diabetes RCTs, higher-fiber diets reduced HbA1c and hypoglycemia; carbohydrate-restricted diets improved TIR, CV, and insulin needs, with varying certainty.",
+        "FASTO paper: FASTO includes diet subplans and mealtime carbohydrate calculations as part of personalized care plans."
+      ],
+      "related_topic": "Dietary-pattern interventions and outcomes",
+      "expected_answer_type": "other",
+      "required_existing_entities": [
+        "ontofood:meal",
+        "ontofood:Carbohydrates",
+        "ontofood:Fiber",
+        "ftdmowl:DMTO_0002117",
+        "ftdmowl:DMTO_0002116",
+        "fasto:Meal.totalCarbsInGrams",
+        "ftdmowl:has_3_months_A1C_level"
+      ],
+      "suggested_new_entities": [
+        "DietaryPatternIntervention",
+        "HighFiberDiet",
+        "CarbohydrateRestrictedDiet",
+        "DietaryInterventionOutcome",
+        "EvidenceCertainty",
+        "TimeInRange",
+        "CoefficientOfVariation",
+        "InsulinDoseOutcome"
+      ],
+      "sparql_translatable": "partly",
+      "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX fhir: <http://hl7.org/fhir/>\nPREFIX fasto: <https://bioportal.bioontology.org/ontologies/FASTO/>\nPREFIX ftdm: <https://bioportal.bioontology.org/ontologies/FTDM/>\nPREFIX ftdmowl: <https://bioportal.bioontology.org/ontologies/FTDM.owl#>\nPREFIX ddo: <http://purl.obolibrary.org/obo/DDO.owl#>\nPREFIX ssn: <http://www.w3.org/ns/ssn/>\nPREFIX ontofood: <http://www.owl-ontologies.com/OntoFood.owl#>\nSELECT ?meal ?fiber ?carbs WHERE {\n  OPTIONAL { ?meal ftdmowl:DMTO_0002117 ?fiber . }\n  OPTIONAL { ?meal ftdmowl:DMTO_0002116 ?carbs . }\n  OPTIONAL { ?meal fasto:Meal.totalCarbsInGrams ?carbsTotal . }\n}",
+      "sparql_limitation": "The query can retrieve meal nutrient fields but cannot represent dietary patterns, study-level evidence, or CGM-derived outcome metrics.",
+      "ontology_coverage": "partly_covered",
+      "coverage_evidence": "FASTO has meal/macronutrient coverage but lacks dietary-pattern intervention and evidence/outcome semantics.",
+      "coverage_gap_type": "missing_entity",
+      "related_gap_or_update_need": "Add dietary-pattern classes and outcome relations to HbA1c, CGM metrics, hypoglycemia, insulin dose, and anthropometrics.",
+      "priority": "medium",
+      "confidence": 0.81,
+      "additional_comment": ""
+    },
+    {
+      "id": "CQ18",
+      "question": "Can FASTO represent the transition from pediatric to adult diabetes care as a care phase with possible gaps in ambulatory care and elevated DKA risk for adolescents and young adults?",
+      "motivation": "This tests life-course continuity of care, a temporal relation absent from basic child/adult categorization.",
+      "evidence": [
+        "FASTO_RDF.owl entity audit: FASTO contains child, adult, oldAdult, carePlan, episode/encounter periods, diabetic ketoacidosis, and education records, but no transition-to-adult-care entity or ambulatory-care-gap relation was found.",
+        "ADA Standards of Care 2026, Section 14: guidance is provided on transition from pediatric to adult diabetes care to ensure continued care as a person becomes an adult.",
+        "ADA Standards of Care 2026, Section 6: DKA in established pediatric diabetes is often associated with psychosocial challenges and transition from pediatric to adult health care, where gaps in ambulatory care may occur."
+      ],
+      "related_topic": "Pediatric-to-adult transition and DKA risk",
+      "expected_answer_type": "temporal",
+      "required_existing_entities": [
+        "ftdmowl:child",
+        "ftdmowl:adult",
+        "ftdmowl:DMTO_0000044",
+        "ddo:DDO_0000222",
+        "http://hl7.org/fhir/EpisodeOfCare.status",
+        "http://hl7.org/fhir/Encounter.statusHistory.period"
+      ],
+      "suggested_new_entities": [
+        "TransitionFromPediatricToAdultCare",
+        "YoungAdultWithType1Diabetes",
+        "AmbulatoryCareGap",
+        "transitionCarePlan",
+        "DKARiskDuringTransition",
+        "continuityOfCare"
+      ],
+      "sparql_translatable": "partly",
+      "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX fhir: <http://hl7.org/fhir/>\nPREFIX fasto: <https://bioportal.bioontology.org/ontologies/FASTO/>\nPREFIX ftdm: <https://bioportal.bioontology.org/ontologies/FTDM/>\nPREFIX ftdmowl: <https://bioportal.bioontology.org/ontologies/FTDM.owl#>\nPREFIX ddo: <http://purl.obolibrary.org/obo/DDO.owl#>\nPREFIX ssn: <http://www.w3.org/ns/ssn/>\nPREFIX ontofood: <http://www.owl-ontologies.com/OntoFood.owl#>\nSELECT ?patient ?carePlan WHERE {\n  { ?patient a ftdmowl:child . } UNION { ?patient a ftdmowl:adult . }\n  OPTIONAL { ?carePlan a ftdmowl:DMTO_0000044 . }\n}",
+      "sparql_limitation": "The query can distinguish child/adult categorization and care plans but cannot model transition phase, continuity gaps, or transition-related DKA risk.",
+      "ontology_coverage": "partly_covered",
+      "coverage_evidence": "FASTO has age classes and DKA concepts but lacks transition-of-care semantics and risk relations.",
+      "coverage_gap_type": "missing_entity",
+      "related_gap_or_update_need": "Add transition-care phase entities, continuity-of-care relations, and DKA-risk links for adolescents and young adults.",
+      "priority": "medium",
+      "confidence": 0.83,
+      "additional_comment": ""
+    }
+  ],
+  "coverage_summary": {
+    "number_of_questions": 18,
+    "number_covered": 0,
+    "number_partly_covered": 17,
+    "number_not_covered": 1,
+    "number_unclear": 0,
+    "covered_topics": [
+      "Generic patient profiles and care plans",
+      "Age-category entities for child, adult, and older adult",
+      "Insulin drug and basal/bolus regimen structures",
+      "Meal macronutrient and insulin calculation fields",
+      "Exercise-plan structures",
+      "FHIR/SSN observation, device, adverse event, goal, medication, and encounter patterns",
+      "Hypoglycemia, ketoacidosis, ketone, A1C, and some disease/condition entities"
+    ],
+    "missing_or_underrepresented_topics": [
+      "CGM aggregate metrics and AID/AHCL device semantics",
+      "Level-based hypoglycemia classification and treatment protocols",
+      "Emergency glucagon prescribing, administration training, and support-person roles",
+      "Fear of hypoglycemia, impaired awareness, hypoglycemia confidence, and psychosocial barriers",
+      "Life-stage-specific pediatric and older-adult management constraints",
+      "Temporal monitoring frequencies and transition-of-care phases",
+      "Sick-day management, DKA risk mitigation, and SGLT-related ketone monitoring",
+      "Shared decision-making, preferences, SDOH, financial considerations, and treatment burden",
+      "Dietary-pattern interventions and evidence/outcome modeling"
+    ],
+    "main_update_needs": [
+      "Add current hypoglycemia-management model: levels, oral treatment protocol, glucagon rescue, support-person education, impaired awareness, and fear-of-hypoglycemia screening.",
+      "Add current diabetes technology model: CGM metrics, AID/AHCL systems, insulin pump/CGM/algorithm composition, device-selection criteria, safety outcomes, and patient-reported outcomes.",
+      "Add life-course management model: pediatric developmental appropriateness, older-adult geriatric screening, monitoring-frequency rules, and pediatric-to-adult transition continuity.",
+      "Extend treatment and nutrition models with inhaled insulin, CSII/MDI modality distinctions, sick-day adjustment, glycemic trends, dietary patterns, and evidence-linked outcomes.",
+      "Extend patient context modeling for shared decision-making, social determinants, financial considerations, treatment burden, and support-person roles."
+    ],
+    "comments": "Coverage assessments are based on the authoritative FASTO_RDF.owl entity/property audit plus the verbalized ontology for readability. Empty SPARQL results were not used as proof of missing coverage; gaps are stated where relevant entity or relation names and modeled patterns were not identified in the ontology audit. Several questions are partly covered because FASTO has generic FHIR/SSN or diabetes-treatment structures, but current clinical semantics require new classes, relations, or axioms."
+  }
+}
