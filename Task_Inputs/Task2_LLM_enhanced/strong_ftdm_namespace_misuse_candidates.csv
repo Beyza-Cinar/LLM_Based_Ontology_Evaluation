@@ -1,0 +1,3 @@
+entity,local_name,entity_type,pattern
+https://bioportal.bioontology.org/ontologies/FTDM.owl#DDO_17621005,DDO_17621005,Class,DDO-style identifier
+https://bioportal.bioontology.org/ontologies/FTDM.owl#FASTOOntologyProperty,FASTOOntologyProperty,ObjectProperty,FASTO reference

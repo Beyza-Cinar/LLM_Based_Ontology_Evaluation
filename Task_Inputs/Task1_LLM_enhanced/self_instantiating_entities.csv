@@ -1,0 +1,9 @@
+entity,is_fasto_native
+https://bioportal.bioontology.org/ontologies/FASTO/breath_holding,True
+https://bioportal.bioontology.org/ontologies/FASTO/fetal_anemia,True
+https://bioportal.bioontology.org/ontologies/FASTO/jarring,True
+https://bioportal.bioontology.org/ontologies/FASTO/normal_weight,True
+https://bioportal.bioontology.org/ontologies/FASTO/overweight,True
+https://bioportal.bioontology.org/ontologies/FASTO/severe_obesity,True
+https://bioportal.bioontology.org/ontologies/FASTO/underweight,True
+https://bioportal.bioontology.org/ontologies/FTDM/MLC815,False

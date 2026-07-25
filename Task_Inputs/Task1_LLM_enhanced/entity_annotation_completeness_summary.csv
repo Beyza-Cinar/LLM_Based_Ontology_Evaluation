@@ -1,0 +1,10 @@
+namespace_group,entity_type,entity_count,missing_labels,missing_definitions
+FASTO-native,Class,89,89,89
+FASTO-native,DatatypeProperty,27,27,27
+FASTO-native,NamedIndividual,158,158,158
+FASTO-native,ObjectProperty,38,38,38
+Reused/external,AnnotationProperty,126,33,99
+Reused/external,Class,9488,623,9404
+Reused/external,DatatypeProperty,136,71,136
+Reused/external,NamedIndividual,302,302,301
+Reused/external,ObjectProperty,620,577,605

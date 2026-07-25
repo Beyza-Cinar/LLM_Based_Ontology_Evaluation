@@ -1,0 +1,21 @@
+metric,value
+Total triples,90015
+Unique FASTO-native entities,305
+FASTO-native entity-type pairs,312
+FASTO-native classes,89
+FASTO-native entities missing labels,305
+FASTO-native entities missing definitions,305
+Duplicate normalized labels,454
+FASTO duplicate labels,0
+Classes without asserted superclass,0
+Isolated named classes,0
+Connected class components,1
+Properties missing domain or range,68
+FASTO properties missing domain or range,1
+Genuine undeclared FASTO entities,0
+SWRL rules,140
+Distinct SWRLB built-ins,9
+Self-instantiating entities,8
+FASTO self-instantiating entities,7
+FTDM-only candidate IRIs,700
+Strong FTDM namespace anomalies,2

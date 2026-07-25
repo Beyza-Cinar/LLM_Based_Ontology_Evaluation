@@ -1,0 +1,455 @@
+normalized_label,label_forms,entity_count,fasto_native_count,entities
+acute bacterial tubulointerstitial nephritis,acute bacterial tubulointerstitial nephritis,5,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000560 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000575 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000630 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000644 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003743
+acute fungal tubulointerstitial nephritis,acute fungal tubulointerstitial nephritis,5,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000561 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000631 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000645 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000651 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003744
+acute gonococcal urethritis,acute gonococcal urethritis,5,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000557 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000583 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000603 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000608 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000611
+acute apical periodontitis of pulpal origin,acute apical periodontitis of pulpal origin,4,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001813 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001821 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003039 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003048
+acute infectious tubulointerstitial nephritis,acute infectious tubulointerstitial nephritis,4,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000559 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000629 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000643 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003742
+acute tubulointerstitial nephritis associated with systemic infection,acute tubulointerstitial nephritis associated with systemic infection,4,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000562 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000632 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000646 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003745
+acute viral tubulointerstitial nephritis,acute viral tubulointerstitial nephritis,4,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000563 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000633 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000647 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003746
+alveolar pyorrhea,alveolar pyorrhea,4,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001827 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001837 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003054 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003063
+chronic apical periodontitis,chronic apical periodontitis,4,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001822 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001828 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003049 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003055
+acute gonococcal cystitis,acute gonococcal cystitis,3,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000556 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000579 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000602
+acute necrotizing ulcerative periodontitis,acute necrotizing ulcerative periodontitis,3,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001814 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003040 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003066
+acute osteomyelitis-metatarsal,acute osteomyelitis-metatarsal,3,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001730 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001755 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001786
+acute osteomyelitis-phalanx of toe,acute osteomyelitis-phalanx of toe,3,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001731 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001764 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001787
+acute pneumococcal bronchitis,acute pneumococcal bronchitis,3,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001580 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002471 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002477
+acute pyelonephritis,acute pyelonephritis,3,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000564 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000634 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0009052
+acute pyonephrosis,acute pyonephrosis,3,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000569 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000639 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000657
+acute suppurative pancreatitis,acute suppurative pancreatitis,3,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_00019018 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0009025 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0009030
+adenoviral laryngotracheobronchitis,adenoviral laryngotracheobronchitis,3,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001594 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001625 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001650
+chronic gonococcal urethritis,chronic gonococcal urethritis,3,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000586 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000595 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000612
+congenital capsular cataract,congenital capsular cataract,3,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000753 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000754 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000781
+conjunctival arteriolar vasoconstriction,Conjunctival Arteriolar Vasoconstriction,3,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000460 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000479 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000483
+conjunctival arteriolar vasodilation,Conjunctival Arteriolar Vasodilation,3,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000517 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000536 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000540
+definition,Definition | definition,3,0,http://purl.obolibrary.org#Definition | http://purl.obolibrary.org/obo/IAO_0000115 | http://www.w3.org/2004/02/skos/core#definition
+diabetic femoral mononeuropathy,diabetic femoral mononeuropathy,3,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001246 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001380 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001481
+diabetic mixed sensory-motor polyneuropathy,diabetic mixed sensory-motor polyneuropathy,3,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001258 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001260 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0009309
+emphysematous pyelonephritis,emphysematous pyelonephritis,3,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000567 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000637 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0009053
+focal pyelonephritis,focal pyelonephritis,3,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000568 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000638 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0009054
+foot ulcer,foot ulcer,3,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000441 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000449 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002290
+genitourinary arteriolar vasoconstriction,Genitourinary Arteriolar Vasoconstriction,3,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000461 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000481 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000484
+genitourinary arteriolar vasodilation,Genitourinary Arteriolar Vasodilation,3,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000518 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000538 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000541
+hypoglycemic coma,hypoglycemic coma,3,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000227 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000417 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002646
+morton's metatarsalgia,Morton's metatarsalgia,3,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001360 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001375 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001516
+oropharyngeal arteriolar vasoconstriction,Oropharyngeal Arteriolar Vasoconstriction,3,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000462 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000485 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000488
+oropharyngeal arteriolar vasodilation,Oropharyngeal Arteriolar Vasodilation,3,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000519 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000542 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000545
+primary gout,primary gout,3,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000535 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000550 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001218
+renal afferent arteriolar vasoconstriction,Renal Afferent Arteriolar Vasoconstriction,3,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000467 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000497 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000499
+renal afferent arteriolar vasodilation,Renal Afferent Arteriolar Vasodilation,3,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000524 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000554 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000556
+renal efferent arteriolar vasoconstriction,Renal Efferent Arteriolar Vasoconstriction,3,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000468 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000500 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000502
+renal efferent arteriolar vasodilation,Renal Efferent Arteriolar Vasodilation,3,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000525 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000557 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000559
+respiratory arteriolar vasoconstriction,Respiratory Arteriolar Vasoconstriction,3,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000463 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000486 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000490
+respiratory arteriolar vasodilation,Respiratory Arteriolar Vasodilation,3,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000520 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000543 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000547
+saxagliptin,saxagliptin,3,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0006143 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000928 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001552
+secondary gout,secondary gout,3,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000539 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000551 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001220
+syphilitic portal cirrhosis,syphilitic portal cirrhosis,3,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0003206 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003219 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003223
+acarbose,Acarbose | acarbose,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000921 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001536
+acebutolol,acebutolol,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004880 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005225
+acetazolamide,acetazolamide,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0005002 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001793
+acute atopic conjunctivitis,acute atopic conjunctivitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000833 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000872
+acute bacterial bronchitis,acute bacterial bronchitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001575 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002466
+acute bacterial paronychia,acute bacterial paronychia,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002559 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003670
+acute chlamydial bronchitis,acute chlamydial bronchitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001576 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002467
+acute emphysematous cholecystitis,acute emphysematous cholecystitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0003178 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0009106
+acute follicular conjunctivitis,acute follicular conjunctivitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000835 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000860
+acute glomerulonephritis,acute glomerulonephritis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002723 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003728
+acute glomerulonephritis associated with another disorder,acute glomerulonephritis associated with another disorder,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002724 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003729
+acute haemophilus influenzae bronchitis,acute haemophilus influenzae bronchitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001577 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002468
+acute lower urinary tract infection,acute lower urinary tract infection,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000555 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000601
+acute moraxella catarrhalis bronchitis,acute Moraxella catarrhalis bronchitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001578 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002469
+acute nephritis with lesions of necrotizing glomerulitis,acute nephritis with lesions of necrotizing glomerulitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002726 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003731
+acute on chronic interstitial nephritis,acute on chronic interstitial nephritis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0003739 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003747
+acute osteomyelitis-calcaneum,acute osteomyelitis-calcaneum,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001729 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001751
+acute osteomyelitis-talus,acute osteomyelitis-talus,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001732 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001757
+acute pancreatitis due to infection,acute pancreatitis due to infection,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_00019019 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0009031
+acute pericoronitis,acute pericoronitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001811 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003037
+acute periodontitis,acute periodontitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001812 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003038
+acute post-streptococcal glomerulonephritis,acute post-streptococcal glomerulonephritis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002725 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003730
+acute pyelonephritis with medullary necrosis,acute pyelonephritis with medullary necrosis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000565 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000635
+acute pyelonephritis without medullary necrosis,acute pyelonephritis without medullary necrosis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000566 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000636
+acute pyonephrosis with renal medullary necrosis,acute pyonephrosis with renal medullary necrosis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000570 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000640
+acute pyonephrosis without renal medullary necrosis,acute pyonephrosis without renal medullary necrosis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000571 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000641
+acute rosacea conjunctivitis,acute rosacea conjunctivitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000837 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000958
+acute streptococcal bronchitis,acute streptococcal bronchitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001579 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002470
+acute subendocardial infarction,acute subendocardial infarction,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002055 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003564
+acute suppurative alveolar periostitis,acute suppurative alveolar periostitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_00014 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003041
+acute upper urinary tract infection,acute upper urinary tract infection,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000558 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000628
+acute-on-chronic respiratory failure,acute-on-chronic respiratory failure,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001629 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001632
+adenoviral bronchiolitis,adenoviral bronchiolitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001592 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001600
+adenoviral bronchopneumonia,adenoviral bronchopneumonia,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDOO_0001511 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001593
+adiposogenital dystrophy,adiposogenital dystrophy,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001878 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003660
+adult periodontitis,adult periodontitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001815 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003042
+aganglionosis of auerbach's plexus,aganglionosis of Auerbach's plexus,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001307 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001338
+aggressive periodontitis,aggressive periodontitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001819 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003045
+albiglutide,albiglutide,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000947 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001542
+alcohol-induced acute pancreatitis,alcohol-induced acute pancreatitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_00019013 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0009400
+alcoholic fatty liver,alcoholic fatty liver,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0003241 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003249
+alogliptin,alogliptin,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000926 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001550
+alogliptin 12.5 mg / pioglitazone 15 mg oral tablet,alogliptin 12.5 MG / pioglitazone 15 MG Oral Tablet,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001181 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001380
+alogliptin 12.5 mg / pioglitazone 30 mg oral tablet,alogliptin 12.5 MG / pioglitazone 30 MG Oral Tablet,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001182 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001381
+alogliptin 12.5 mg / pioglitazone 45 mg oral tablet,alogliptin 12.5 MG / pioglitazone 45 MG Oral Tablet,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001183 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001382
+alogliptin 25 mg / pioglitazone 15 mg oral tablet,alogliptin 25 MG / pioglitazone 15 MG Oral Tablet,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001185 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001383
+alogliptin 25 mg / pioglitazone 30 mg oral tablet,alogliptin 25 MG / pioglitazone 30 MG Oral Tablet,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001186 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001384
+alogliptin 25 mg / pioglitazone 45 mg oral tablet,alogliptin 25 MG / pioglitazone 45 MG Oral Tablet,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001187 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001385
+alpha glucosidase inhibitor,alpha Glucosidase Inhibitor | alpha glucosidase inhibitor,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000914 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001535
+amaurosis fugax,amaurosis fugax,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002096 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002233
+amitriptyline 12.5mg/chlordiazepoxide 10mg tablet,amitriptyline 12.5mg/chlordiazepoxide 10mg tablet,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004221 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0004242
+amitriptyline hydrochloride + perphenazine 10mg/4mg tablet,amitriptyline hydrochloride + perphenazine 10mg/4mg tablet,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004219 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0004239
+amitriptyline hydrochloride+chlordiazepoxide 12.5mg/5mg tablet,amitriptyline hydrochloride+chlordiazepoxide 12.5mg/5mg tablet,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004222 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0004230
+amitriptyline hydrochloride+perphenazine 10mg/2mg tablet,amitriptyline hydrochloride+perphenazine 10mg/2mg tablet,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004218 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0004229
+amitriptyline hydrochloride+perphenazine 25mg/2mg tablet,amitriptyline hydrochloride+perphenazine 25mg/2mg tablet,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004217 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0004228
+amitriptyline hydrochloride+perphenazine 25mg/4mg tablet,amitriptyline hydrochloride+perphenazine 25mg/4mg tablet,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004216 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0004227
+amitriptyline hydrochloride+perphenazine 50mg/4mg tablet,amitriptyline hydrochloride+perphenazine 50mg/4mg tablet,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004215 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0004226
+analgesia,Analgesia,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000726 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000830
+anemia of chronic renal failure,anemia of chronic renal failure,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002969 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0009404
+angiosarcoma of liver,angiosarcoma of liver,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0003281 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003285
+angiotensin ii receptor antagonist,angiotensin II receptor antagonist,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0005301 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005304
+anterior subcapsular polar senile cataract,anterior subcapsular polar senile cataract,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000740 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000759
+apical periodontitis,apical periodontitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001820 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003047
+appetite stimulation,Appetite Stimulation,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000084 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000731
+appetite suppression,Appetite Suppression,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000085 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000727
+arteriosclerosis,arteriosclerosis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001005 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002609
+articular gout,articular gout,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000541 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001207
+asymmetric diabetic proximal motor neuropathy,asymmetric diabetic proximal motor neuropathy,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001242 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002192
+atrial paroxysmal tachycardia,atrial paroxysmal tachycardia,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001164 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001177
+atrioventricular block,atrioventricular block,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001079 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001093
+autism ae,autism AE,2,0,http://purl.obolibrary.org/obo/OAE_0000444 | http://purl.obolibrary.org/obo/OAE_0001544
+av-junctional (nodal) bradycardia,AV-junctional (nodal) bradycardia,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001050 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001136
+bacterial paronychia,bacterial paronychia,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002558 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003671
+bacterial portal cirrhosis,bacterial portal cirrhosis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0003207 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003215
+bacterial urethritis,bacterial urethritis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000582 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000607
+basilar artery syndrome,basilar artery syndrome,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002086 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002240
+benign essential hypertension,benign essential hypertension,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002101 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002111
+benign essential hypertension in obstetric context,benign essential hypertension in obstetric context,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002112 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002114
+benign secondary hypertension,benign secondary hypertension,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002102 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002147
+benign secondary renovascular hypertension,benign secondary renovascular hypertension,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002104 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002155
+beta 1 blocking agent,Beta 1 blocking agent | beta 1 blocking agent,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004879 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005224
+beta-blocking agent,beta-Blocking agent,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004878 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005223
+betamethasone + clotrimazole,betamethasone + clotrimazole,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0005198 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005213
+betaxolol,Betaxolol | betaxolol,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004894 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005228
+bisoprolol,Bisoprolol | bisoprolol,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004898 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005231
+bisoprolol fumarate,Bisoprolol fumarate | bisoprolol fumarate,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004899 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005232
+blister of foot with infection,blister of foot with infection,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001733 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002659
+brachial radiculitis,brachial radiculitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001459 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001546
+buffalo obesity,Buffalo obesity,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001874 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001882
+bupropion hydrochloride 100mg m/r tablet,bupropion hydrochloride 100mg m/r tablet,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004021 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0004034
+bupropion hydrochloride 150mg m/r tablet,bupropion hydrochloride 150mg m/r tablet,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004023 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0004033
+bupropion hydrochloride 200mg m/r tablet,bupropion hydrochloride 200mg m/r tablet,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004024 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0004032
+bupropion hydrochloride 300mg m/r tablet,bupropion hydrochloride 300mg m/r tablet,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004025 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0004031
+bupropion hydrochloride 50mg m/r tablet,bupropion hydrochloride 50mg m/r tablet,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004026 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0004030
+calculous pyelonephritis,calculous pyelonephritis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000648 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0009055
+candesartan,Candesartan | candesartan,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0005302 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005305
+candesartan cilexetil,Candesartan cilexetil | candesartan cilexetil,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0005303 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005306
+candida pyelonephritis,Candida pyelonephritis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000653 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0009056
+candidal endocarditis,candidal endocarditis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002360 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003918
+candidal paronychia,candidal paronychia,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0003667 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003929
+candidal urethritis,candidal urethritis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000609 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000625
+capillary fragility abnormality,capillary fragility abnormality,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0003597 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003602
+captopril + hydrochlorothiazide,captopril + hydrochlorothiazide,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0005314 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005390
+carcinoma of hepatic flexure,carcinoma of hepatic flexure,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0003338 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003365
+carcinoma of splenic flexure,carcinoma of splenic flexure,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0003346 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003366
+cardiac portal cirrhosis,cardiac portal cirrhosis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0003205 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003224
+cardiorespiratory arrest,cardiorespiratory arrest,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001062 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001642
+carotid artery syndrome hemispheric,carotid artery syndrome hemispheric,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002095 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002234
+carotid territory transient ischemic attack,carotid territory transient ischemic attack,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002097 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002232
+carteolol,Carteolol | carteolol,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004907 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005243
+carvedilol,Carvedilol | carvedilol,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004909 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005246
+celiac infantilism,celiac infantilism,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0003525 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003656
+celiac plexus syndrome,celiac plexus syndrome,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001292 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001321
+celiprolol,Celiprolol | celiprolol,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004900 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005233
+celiprolol hydrochloride,Celiprolol hydrochloride | celiprolol hydrochloride,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004901 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005234
+cerebral arteriolar vasoconstriction,Cerebral Arteriolar Vasoconstriction,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000456 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000472
+cerebral arteriolar vasodilation,Cerebral Arteriolar Vasodilation,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000513 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000529
+cervical radiculitis,cervical radiculitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001423 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001460
+chronic allergic conjunctivitis,chronic allergic conjunctivitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000851 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000874
+chronic exudative glomerulonephritis,chronic exudative glomerulonephritis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDDO_0003735 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002745
+chronic follicular conjunctivitis,chronic follicular conjunctivitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000852 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000861
+chronic gonococcal cystitis,chronic gonococcal cystitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000580 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000594
+chronic gout without tophus,chronic gout without tophus,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000545 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001213
+chronic gouty arthritis,chronic gouty arthritis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000542 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001208
+chronic idiopathic anhidrosis,chronic idiopathic anhidrosis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001288 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0009072
+chronic infective interstitial nephritis,chronic infective interstitial nephritis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000592 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003753
+chronic inflammatory demyelinating polyneuritis,chronic inflammatory demyelinating polyneuritis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001538 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0009318
+chronic myocardial ischemia,chronic myocardial ischemia,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0003552 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003556
+chronic periodontitis,chronic periodontitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001826 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003053
+chronic periodontitis complex,chronic periodontitis complex,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001829 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003056
+chronic periodontitis simplex,chronic periodontitis simplex,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001830 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003057
+chronic periodontitis with drifting of teeth,chronic periodontitis with drifting of teeth,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001831 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003058
+chronic pyonephrosis,chronic pyonephrosis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000596 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000658
+chronic tophaceous gout,chronic tophaceous gout,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000543 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001209
+clonorchiasis with biliary cirrhosis,clonorchiasis with biliary cirrhosis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0003192 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003221
+coagulopathy ae,coagulopathy AE,2,0,http://purl.obolibrary.org/obo/OAE_0000934 | http://purl.obolibrary.org/obo/OAE_0002403
+coccidioidal granuloma,Coccidioidal granuloma,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002355 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002374
+compression of sacral nerve root,compression of sacral nerve root,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001429 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001437
+congenital celiac disease,congenital celiac disease,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0003524 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003658
+congenital chlamydial pneumonia,congenital chlamydial pneumonia,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002481 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002506
+congenital cortical cataract,congenital cortical cataract,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000784 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000799
+congenital escherichia coli pneumonia,congenital Escherichia coli pneumonia,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002482 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002512
+congenital group a hemolytic streptococcal pneumonia,congenital group A hemolytic streptococcal pneumonia,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001654 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002483
+congenital group b hemolytic streptococcal pneumonia,congenital group B hemolytic streptococcal pneumonia,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001655 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002484
+congenital pseudomonal pneumonia,congenital pseudomonal pneumonia,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002485 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002501
+congenital subcapsular cataract,congenital subcapsular cataract,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000755 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000761
+congenital zonular cataract,congenital zonular cataract,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000785 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000800
+conjugated estrogen + medroxyprogesterone,conjugated estrogen + medroxyprogesterone,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0005674 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005678
+coronary arteriolar vasoconstriction,Coronary Arteriolar Vasoconstriction,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000457 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000474
+coronary arteriolar vasodilation,Coronary Arteriolar Vasodilation,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000514 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000531
+coronary artery embolism ae,coronary artery embolism AE,2,0,http://purl.obolibrary.org/obo/OAE_0000844 | http://purl.obolibrary.org/obo/OAE_0001787
+creator,Creator,2,0,http://purl.org/dc/elements/1.1/creator | http://www.co-ode.org/ontologies/ont.owl#DDO_0000002
+critical ischemia of foot,critical ischemia of foot,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002253 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002256
+crystals,Crystals | crystals,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000294 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000884
+cutaneous allodynia,cutaneous allodynia,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002201 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0009252
+cutaneous arteriolar vasoconstriction,Cutaneous Arteriolar Vasoconstriction,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000458 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000476
+cutaneous arteriolar vasodilation,Cutaneous Arteriolar Vasodilation,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000515 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000533
+cutaneous cryptococcosis,cutaneous cryptococcosis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002371 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002378
+cutaneous hyperalgesia,cutaneous hyperalgesia,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002202 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0009254
+cutaneous trichosporonosis,cutaneous trichosporonosis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002383 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002388
+cystadenocarcinoma of pancreas,cystadenocarcinoma of pancreas,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0003293 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003307
+cytomegaloviral pancreatitis,cytomegaloviral pancreatitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_00019016 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0009028
+decreased histamine activity,Decreased Histamine Activity,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000181 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000798
+decreased insulin secretion,Decreased Insulin Secretion | decreased insulin secretion,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0009168 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000692
+decreased serotonin activity,Decreased Serotonin Activity,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000198 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000818
+defective development of the cauda equina,defective development of the cauda equina,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001339 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001431
+degeneration of cervicothoracic intervertebral disc,degeneration of cervicothoracic intervertebral disc,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0003794 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003799
+degeneration of thoracolumbar intervertebral disc,degeneration of thoracolumbar intervertebral disc,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0003793 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003797
+dehydration,dehydration,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000478 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0009177
+diabetic acute painful polyneuropathy,diabetic acute painful polyneuropathy,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001235 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001254
+diabetic autonomic neuropathy,diabetic autonomic neuropathy,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001243 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001289
+diabetic glomerulonephritis,diabetic glomerulonephritis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000675 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002768
+diabetic glomerulosclerosis,diabetic glomerulosclerosis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000676 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002707
+diabetic intracapillary glomerulosclerosis,diabetic intracapillary glomerulosclerosis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000677 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002708
+diabetic ophthalmoplegia,diabetic ophthalmoplegia,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001240 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003165
+diffuse pyelonephritis,diffuse pyelonephritis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000649 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0009062
+diffuse type diabetic glomerulosclerosis,diffuse type diabetic glomerulosclerosis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000678 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002709
+diltiazem hydrochloride+hydrochlorothiazide,diltiazem hydrochloride+hydrochlorothiazide,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0005359 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005389
+disorder of digestive organ,disorder of digestive organ,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002605 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003521
+disorder of intestine,disorder of intestine,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002606 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003522
+distal and lateral subungual onychomycosis,distal and lateral subungual onychomycosis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002172 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0006282
+dopamine agonist,Dopamine Agonist | dopamine agonist,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000964 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001557
+dulaglutide,dulaglutide,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000951 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001543
+early onset periodontitis,early onset periodontitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001842 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003070
+ecthyma gangrenosum,ecthyma gangrenosum,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002563 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002856
+ectopic atrioventricular node tachycardia,ectopic atrioventricular node tachycardia,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001115 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001181
+eczematid-like purpura of doucas and kapetanakis,eczematid-like purpura of Doucas and Kapetanakis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0003601 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003611
+emesis suppression,Emesis Suppression,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000616 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000728
+enzyme inhibitor,Enzyme Inhibitor | enzyme inhibitor,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0005297 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001533
+esmolol,Esmolol | esmolol,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004902 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005235
+essential hypertension in obstetric context,essential hypertension in obstetric context,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002113 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002127
+estradiol cypionate+medroxyprogesterone acetate 5mg/25mg injection,estradiol cypionate+medroxyprogesterone acetate 5mg/25mg injection,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0005683 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005686
+ethacrynic acid,ethacrynic acid,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0005789 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005794
+exenatide,exenatide,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000953 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001544
+extended release enteric coated capsule,Extended Release Enteric Coated Capsule,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000907 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000908
+exudative maculopathy associated with type 1 diabetes mellitus,exudative maculopathy associated with type 1 diabetes mellitus,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000703 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003119
+exudative maculopathy associated with type 2 diabetes mellitus,exudative maculopathy associated with type 2 diabetes mellitus,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000708 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003120
+familial juvenile gout,familial juvenile gout,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000546 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001214
+febrile granulocytopenia,febrile granulocytopenia,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0003436 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003440
+femoral nerve compression,femoral nerve compression,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001372 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001482
+fetal bradycardia,fetal bradycardia,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001051 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001142
+fetal tachycardia,fetal tachycardia,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000516 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001143
+fournier's gangrene of scrotum,Fournier's gangrene of scrotum,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001799 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001804
+generalized adult periodontitis,generalized adult periodontitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001816 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003043
+generalized chronic periodontitis,generalized chronic periodontitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001832 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003059
+giant papillary conjunctivitis,giant papillary conjunctivitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000845 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000875
+glimepiride 1 mg / rosiglitazone 4 mg oral tablet,glimepiride 1 MG / rosiglitazone 4 MG Oral Tablet,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001332 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001396
+glimepiride 2 mg / pioglitazone 30 mg oral tablet,glimepiride 2 MG / pioglitazone 30 MG Oral Tablet,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001334 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001386
+glimepiride 2 mg / rosiglitazone 4 mg oral tablet,glimepiride 2 MG / rosiglitazone 4 MG Oral Tablet,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001335 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001397
+glimepiride 2 mg / rosiglitazone 8 mg oral tablet,glimepiride 2 MG / rosiglitazone 8 MG Oral Tablet,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001336 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001398
+glimepiride 4 mg / pioglitazone 30 mg oral tablet,glimepiride 4 MG / pioglitazone 30 MG Oral Tablet,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001339 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001387
+glimepiride 4 mg / rosiglitazone 4 mg oral tablet,glimepiride 4 MG / rosiglitazone 4 MG Oral Tablet,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001340 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001399
+glimepiride 4 mg / rosiglitazone 8 mg oral tablet,glimepiride 4 MG / rosiglitazone 8 MG Oral Tablet,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001341 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001400
+glossitis ae,glossitis AE,2,0,http://purl.obolibrary.org/obo/OAE_0001965 | http://purl.obolibrary.org/obo/OAE_0002098
+glucose level,glucose level,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0003935 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0009214
+glutamic acid decarboxylase antibody,glutamic acid decarboxylase antibody,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000325 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000328
+gorham's disease,Gorham's disease,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0003412 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0009291
+gout,gout,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000540 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001206
+gouty iritis,gouty iritis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000547 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001215
+gouty neuritis,gouty neuritis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000548 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001216
+gouty tophus,gouty tophus,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000549 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001217
+granulomatosis disciformis et progressiva,granulomatosis disciformis et progressiva,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002420 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002859
+guillain-barré syndrome,Guillain-Barré syndrome,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001541 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0009316
+hemiplegia,hemiplegia,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0009217 | http://purl.obolibrary.org/obo/DOID_10969
+hydrochlorothiazide + telmisartan,hydrochlorothiazide + telmisartan,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0005376 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005842
+hypoglycemia,hypoglycemia,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000228 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000410
+hypoglycemic coma in diabetes mellitus,hypoglycemic coma in diabetes mellitus,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000418 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002641
+hypoglycemic disorder,hypoglycemic disorder,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000226 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000407
+hypogonadal obesity,hypogonadal obesity,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001876 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003661
+idiopathic thrombocytopenic purpura ae,idiopathic thrombocytopenic purpura AE,2,0,http://purl.obolibrary.org/obo/OAE_0002073 | http://purl.obolibrary.org/obo/OAE_0002373
+impaired glucose tolerance in pregnancy,impaired glucose tolerance in pregnancy,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000392 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000435
+impaired glucose tolerance with hyperinsulism,impaired glucose tolerance with hyperinsulism,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000405 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000436
+impetigo of eyelid,impetigo of eyelid,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002553 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002582
+imported from,imported from,2,0,http://purl.obolibrary.org/obo/IAO_0000412 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000051
+increased histamine activity,Increased Histamine Activity,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000267 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000799
+increased lipolysis,Increased Lipolysis,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000395 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000396
+increased serotonin activity,Increased Serotonin Activity,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000284 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000819
+injury of abdominal sympathetic plexus,injury of abdominal sympathetic plexus,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001271 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001281
+injury of celiac plexus,injury of celiac plexus,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001272 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001282
+injury of inferior mesenteric plexus,injury of inferior mesenteric plexus,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001273 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001283
+injury of stellate ganglion,injury of stellate ganglion,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001270 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001277
+insulin coma,insulin coma,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000421 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002645
+intermittent cauda equina claudication,intermittent cauda equina claudication,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001434 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002298
+invasive otitis externa,invasive otitis externa,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001807 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003722
+irbesartan,Irbesartan | irbesartan,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0005826 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005827
+ischemia,ischemia,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002227 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003492
+ischemic maculopathy,ischemic maculopathy,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000696 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003131
+ischemic ulcer diabetic foot,ischemic ulcer diabetic foot,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002294 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002319
+junctional premature beats,junctional premature beats,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001121 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001139
+junctional premature complex,junctional premature complex,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001024 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001156
+juvenile periodontitis,juvenile periodontitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001835 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003061
+labetalol,labetalol,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004910 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005248
+labile essential hypertension,labile essential hypertension,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002117 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002133
+lateral radicular cyst,lateral radicular cyst,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001824 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003051
+leukopenia,leukopenia,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0003424 | http://purl.obolibrary.org/obo/OAE_0001129
+levobetaxolol,levobetaxolol,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004897 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005230
+linagliptin,Linagliptin | linagliptin,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000927 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001551
+liraglutide,liraglutide,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000955 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001545
+localized adult periodontitis,localized adult periodontitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001817 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003044
+localized chronic periodontitis,localized chronic periodontitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001833 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003060
+"localized, primary osteoarthritis of toe","localized, primary osteoarthritis of toe",2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0003828 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003837
+losartan,Losartan | losartan,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0005830 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005832
+lumbosacral radiculitis,lumbosacral radiculitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001448 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001463
+macular edema and retinopathy due to type 2 diabetes mellitus,macular edema and retinopathy due to type 2 diabetes mellitus,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000709 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003110
+maculopapular rash ae,maculopapular rash AE,2,0,http://purl.obolibrary.org/obo/OAE_0000384 | http://purl.obolibrary.org/obo/OAE_0002538
+mahaim fiber tachycardia,Mahaim fiber tachycardia,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001043 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001191
+marginal periodontitis,marginal periodontitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001836 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003062
+mauriac's syndrome,Mauriac's syndrome,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001857 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0009234
+medial plantar nerve compression,medial plantar nerve compression,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001373 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001510
+meralgia paresthetica,meralgia paresthetica,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001374 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001506
+metastasis to liver from adenocarcinoma,metastasis to liver from adenocarcinoma,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0003270 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003287
+metformin hydrochloride 500 mg / repaglinide 1 mg oral tablet,metFORMIN hydrochloride 500 MG / repaglinide 1 MG Oral Tablet,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001271 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001289
+metformin hydrochloride 500 mg / repaglinide 2 mg oral tablet,metFORMIN hydrochloride 500 MG / repaglinide 2 MG Oral Tablet,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001272 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001290
+metipranolol,Metipranolol | metipranolol,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004911 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005252
+metoprolol,metoprolol,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004904 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005237
+miglitol,miglitol,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000922 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001537
+mixed micro and macronodular cirrhosis,mixed micro AND macronodular cirrhosis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0003211 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003213
+mixed myocardial ischemia and infarction,mixed myocardial ischemia and infarction,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002059 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003558
+molluscum contagiosum blepharoconjunctivitis,Molluscum contagiosum blepharoconjunctivitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000847 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000928
+mucocutaneous-lymphangitic paracoccidioidomycosis,mucocutaneous-lymphangitic paracoccidioidomycosis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002367 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002384
+mucopurulent chronic bronchitis,mucopurulent chronic bronchitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001620 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0009115
+mucosal arteriolar vasoconstriction,Mucosal Arteriolar Vasoconstriction,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000459 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000482
+mucosal arteriolar vasodilation,Mucosal Arteriolar Vasodilation,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000516 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000539
+multifocal atrial tachycardia,multifocal atrial tachycardia,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001020 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001169
+multifocal premature beats,multifocal premature beats,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001116 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001157
+muscular arteriolar vasoconstriction,Muscular Arteriolar Vasoconstriction,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000464 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000492
+muscular arteriolar vasodilation,Muscular Arteriolar Vasodilation,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000521 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000549
+nadolol,nadolol,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004912 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005254
+nateglinide,nateglinide,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000957 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000970
+nateglinide 120 mg oral tablet,nateglinide 120 MG Oral Tablet,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001266 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001280
+nateglinide 180 mg oral tablet,nateglinide 180 MG Oral Tablet,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001267 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001281
+nateglinide 60 mg oral tablet,nateglinide 60 MG Oral Tablet,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001268 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001282
+nausea,nausea,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000333 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001013
+nebivolol,Nebivolol | nebivolol,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004905 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005240
+necrotizing periodontal disease,necrotizing periodontal disease,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001838 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003064
+necrotizing ulcerative gingivoperiodontitis,necrotizing ulcerative gingivoperiodontitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001840 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003067
+necrotizing ulcerative periodontitis,necrotizing ulcerative periodontitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001839 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003065
+neonatal bacterial paronychia,neonatal bacterial paronychia,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002560 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003669
+neonatal bradycardia,neonatal bradycardia,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001052 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001147
+neonatal ecthyma gangrenosum,neonatal ecthyma gangrenosum,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002564 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002857
+neonatal purpura fulminans (homozygous protein c deficiency),neonatal purpura fulminans (homozygous protein C deficiency),2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002863 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003579
+nodular type diabetic glomerulosclerosis,nodular type diabetic glomerulosclerosis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000679 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002710
+non-selective beta-blocking agent,non-selective beta-blocking agent,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004906 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005242
+nonparoxysmal av nodal tachycardia,nonparoxysmal AV nodal tachycardia,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001131 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001135
+olanzapine 12mg/fluoxetine 25mg capsule,olanzapine 12mg/fluoxetine 25mg capsule,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004144 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0004157
+olanzapine 12mg/fluoxetine 50mg capsule,olanzapine 12mg/fluoxetine 50mg capsule,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004143 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0004156
+olanzapine 3mg/fluoxetine 25mg capsule,olanzapine 3mg/fluoxetine 25mg capsule,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004142 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0004155
+olanzapine 6mg/fluoxetine 25mg capsule,olanzapine 6mg/fluoxetine 25mg capsule,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004141 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0004154
+olanzapine 6mg/fluoxetine 50mg capsule,olanzapine 6mg/fluoxetine 50mg capsule,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004140 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0004153
+onychomycosis of toenails,onychomycosis of toenails,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001766 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002176
+oxprenolol,oxprenolol,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004913 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005255
+oxprenolol hydrochloride,oxprenolol hydrochloride,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004915 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005256
+pancreatitis,pancreatitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0003494 | http://purl.obolibrary.org/obo/DDO.owl#DOID_4989
+paraneoplastic autonomic dysfunction,paraneoplastic autonomic dysfunction,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001315 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001534
+paronychia of toe,paronychia of toe,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001769 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003663
+parotitis ae,parotitis AE,2,0,http://purl.obolibrary.org/obo/OAE_0001964 | http://purl.obolibrary.org/obo/OAE_0002529
+paroxysmal supraventricular tachycardia,paroxysmal supraventricular tachycardia,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001176 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001193
+penbutolol,Penbutolol | penbutolol,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004916 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005257
+perianal candidiasis,perianal candidiasis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0003916 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003938
+periodontitis,periodontitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001810 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003036
+pertussis,pertussis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001581 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002472
+pindolol,Pindolol | pindolol,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004917 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005259
+pneumocholecystitis,pneumocholecystitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0003177 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0009105
+pneumococcal bronchitis,pneumococcal bronchitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001631 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002476
+post-chemotherapy testicular hypofunction,post-chemotherapy testicular hypofunction,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0003641 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003644
+posterior subcapsular polar senile cataract,posterior subcapsular polar senile cataract,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000747 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000766
+postirradiation testicular hypofunction,postirradiation testicular hypofunction,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0003640 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003643
+postoperative subendocardial myocardial infarction,postoperative subendocardial myocardial infarction,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002065 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003565
+posttraumatic osteoporosis,posttraumatic osteoporosis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001295 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003416
+practolol,practolol,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004918 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005260
+prepubertal periodontitis,prepubertal periodontitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001841 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003068
+primary chronic gout without tophus,primary chronic gout without tophus,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000536 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001219
+primary genetic mixed hyperlipidemia,primary genetic mixed hyperlipidemia,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000967 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001000
+primary idiopathic hypertrophic cardiomyopathy,primary idiopathic hypertrophic cardiomyopathy,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002016 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002019
+primary testicular failure,primary testicular failure,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0003629 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003639
+propranolol,propranolol,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004919 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005261
+pseudomonas aeruginosa paronychia,pseudomonas aeruginosa paronychia,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002561 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003668
+pulmonary arteriolar vasoconstriction,Pulmonary Arteriolar Vasoconstriction,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000465 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000494
+pulmonary arteriolar vasodilation,Pulmonary Arteriolar Vasodilation,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000522 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000551
+pure autonomic failure,pure autonomic failure,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001317 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0009284
+purpura fulminans,purpura fulminans,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002862 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003580
+radial nerve entrapment,radial nerve entrapment,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001393 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001402
+radicular cyst,radicular cyst,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001823 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003050
+rapidly progressive periodontitis,rapidly progressive periodontitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001843 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003071
+refractory periodontitis,refractory periodontitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001844 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003072
+renal arteriolar vasoconstriction,Renal Arteriolar Vasoconstriction,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000466 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000498
+renal arteriolar vasodilation,Renal Arteriolar Vasodilation,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000523 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000555
+repaglinide,repaglinide,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000959 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000971
+repaglinide 0.5 mg oral tablet,repaglinide 0.5 MG Oral Tablet,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001273 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001291
+repaglinide 1 mg oral tablet,repaglinide 1 MG Oral Tablet,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001274 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001292
+repaglinide 2 mg oral tablet,repaglinide 2 MG Oral Tablet,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001275 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001293
+residual cyst,residual cyst,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001825 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003052
+respiratory syncytial virus laryngotracheobronchitis,respiratory syncytial virus laryngotracheobronchitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001628 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001651
+retroviral protease inhibitor,retroviral protease inhibitor,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004466 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0004469
+rhinocerebral mucormycosis,rhinocerebral mucormycosis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001806 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002395
+rosacea blepharoconjunctivitis,rosacea blepharoconjunctivitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000849 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000959
+sclerosing glomerulonephritis,sclerosing glomerulonephritis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002720 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002786
+secondary diastolic hypertension,secondary diastolic hypertension,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002107 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002159
+simvastatin 10 mg / sitagliptin 100 mg oral tablet,Simvastatin 10 MG / sitaGLIPtin 100 MG Oral Tablet,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001212 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001226
+simvastatin 10 mg / sitagliptin 50 mg oral tablet,Simvastatin 10 MG / sitaGLIPtin 50 MG Oral Tablet,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001213 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001227
+simvastatin 20 mg / sitagliptin 100 mg oral tablet,Simvastatin 20 MG / sitaGLIPtin 100 MG Oral Tablet,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001214 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001228
+simvastatin 20 mg / sitagliptin 50 mg oral tablet,Simvastatin 20 MG / sitaGLIPtin 50 MG Oral Tablet,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001215 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001229
+simvastatin 40 mg / sitagliptin 100 mg oral tablet,Simvastatin 40 MG / sitaGLIPtin 100 MG Oral Tablet,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001216 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001230
+simvastatin 40 mg / sitagliptin 50 mg oral tablet,Simvastatin 40 MG / sitaGLIPtin 50 MG Oral Tablet,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001217 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001231
+sitagliptin,sitagliptin,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000930 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0001553
+sotalol,sotalol,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004920 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005264
+splanchnic arteriolar vasoconstriction,Splanchnic Arteriolar Vasoconstriction,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000469 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000504
+splanchnic arteriolar vasodilation,Splanchnic Arteriolar Vasodilation,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000526 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000561
+subcutaneous phycomycosis due to basidiobolus,subcutaneous phycomycosis due to Basidiobolus,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002392 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002411
+sublingual tablet,Sublingual Tablet | sublingual tablet,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000069 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000902
+supraventricular premature beats,supraventricular premature beats,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001120 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001158
+symmetric diabetic proximal motor neuropathy,symmetric diabetic proximal motor neuropathy,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001252 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002193
+sympathetic ganglion injury,sympathetic ganglion injury,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001275 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001285
+synonym,Synonym | synonym,2,0,http://purl.obolibrary.org/obo#Synonym | http://purl.obolibrary.org/obo/DDO.owl#DDO_0099997
+systemic arteriolar vasoconstriction,Systemic Arteriolar Vasoconstriction,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000470 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000506
+systemic arteriolar vasodilation,Systemic Arteriolar Vasodilation,2,0,https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000527 | https://bioportal.bioontology.org/ontologies/FTDM.owl#DMTO_0000563
+tarsal tunnel syndrome,tarsal tunnel syndrome,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001371 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001379
+telmisartan,telmisartan,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0005840 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005841
+thrombocythemia ae,thrombocythemia AE,2,0,http://purl.obolibrary.org/obo/OAE_0000507 | http://purl.obolibrary.org/obo/OAE_0001447
+tibial nerve compression,tibial nerve compression,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001378 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001521
+timolol,timolol,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004921 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005266
+tinea pedis,tinea pedis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001793 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002826
+traction retinal detachment due to type 2 diabetes mellitus,traction retinal detachment due to type 2 diabetes mellitus,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000715 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003113
+transient hypothyrotropinemia,transient hypothyrotropinemia,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0003476 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003478
+transient ischemia,transient ischemia,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002266 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003493
+transient myocardial ischemia of newborn,transient myocardial ischemia of newborn,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0003555 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0003560
+transitory neonatal hyperkalemia,transitory neonatal hyperkalemia,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002905 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002945
+transitory neonatal hypernatremia,transitory neonatal hypernatremia,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002925 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002932
+transitory neonatal hyponatremia,transitory neonatal hyponatremia,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002926 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002940
+"traumatic blister of foot, infected","traumatic blister of foot, infected",2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001734 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002660
+"traumatic blister of heel, infected","traumatic blister of heel, infected",2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001735 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002661
+"traumatic blister of toe, infected","traumatic blister of toe, infected",2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001736 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002662
+triamterene+benzthiazide,triamterene+benzthiazide,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0005345 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005408
+triamterene+chlorthalidone,triamterene+chlorthalidone,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0005356 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005409
+trichomonal urethritis,trichomonal urethritis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000614 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000616
+tuberculous phlyctenular keratoconjunctivitis,tuberculous phlyctenular keratoconjunctivitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000868 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0000944
+valsartan,Valsartan | valsartan,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0005844 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0005845
+venlafaxine hydrochloride 100mg tablet,venlafaxine hydrochloride 100mg tablet,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004096 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0004107
+venlafaxine hydrochloride 25mg tablet,venlafaxine hydrochloride 25mg tablet,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004095 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0004106
+venlafaxine hydrochloride 37.5mg m/r capsule,venlafaxine hydrochloride 37.5mg m/r capsule,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0004101 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0004105
+ventricular bigeminy,ventricular bigeminy,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001034 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001201
+ventricular fibrillation,ventricular fibrillation,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001067 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001205
+ventricular parasystole,ventricular parasystole,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001119 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001204
+ventricular quadrigeminy,ventricular quadrigeminy,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001036 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001123
+ventricular trigeminy,ventricular trigeminy,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0001037 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001124
+vertebrobasilar territory transient ischemic attack,Vertebrobasilar territory transient ischemic attack,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002088 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002239
+viral acute pancreatitis,viral acute pancreatitis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_00019017 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0009029
+visceral gout,visceral gout,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0000552 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0001221
+white piedra,white piedra,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0002390 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0002819
+xanthogranulomatous pyelonephritis,xanthogranulomatous pyelonephritis,2,0,http://purl.obolibrary.org/obo/DDO.owl#DDO_0003764 | http://purl.obolibrary.org/obo/DDO.owl#DDO_0009059

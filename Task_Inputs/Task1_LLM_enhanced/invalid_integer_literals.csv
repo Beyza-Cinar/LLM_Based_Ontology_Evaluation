@@ -1,0 +1,4 @@
+subject,predicate,literal,datatype
+http://purl.obolibrary.org/obo/DDO.owl#DDO_0005335,http://www.w3.org/2000/01/rdf-schema#label,pitavastatin,http://www.w3.org/2001/XMLSchema#integer
+http://purl.obolibrary.org/obo/DDO.owl#DDO_0003244,http://www.w3.org/2000/01/rdf-schema#label,acute hepatic failure,http://www.w3.org/2001/XMLSchema#integer
+http://purl.obolibrary.org/obo/DDO.owl#DDO_0001703,http://www.w3.org/2000/01/rdf-schema#label,acute hepatitis B with hepatitis D,http://www.w3.org/2001/XMLSchema#integer

@@ -1,0 +1,12 @@
+entity,namespace,local_name,entity_type,comparison_key
+http://www.w3.org/ns/ssn/Deployment,http://www.w3.org/ns/ssn/,Deployment,Class,"('http://www.w3.org/ns/ssn/Deployment', 'Class')"
+http://www.w3.org/ns/ssn/Input,http://www.w3.org/ns/ssn/,Input,Class,"('http://www.w3.org/ns/ssn/Input', 'Class')"
+http://www.w3.org/ns/ssn/Output,http://www.w3.org/ns/ssn/,Output,Class,"('http://www.w3.org/ns/ssn/Output', 'Class')"
+http://www.w3.org/ns/ssn/Property,http://www.w3.org/ns/ssn/,Property,Class,"('http://www.w3.org/ns/ssn/Property', 'Class')"
+http://www.w3.org/ns/ssn/Stimulus,http://www.w3.org/ns/ssn/,Stimulus,Class,"('http://www.w3.org/ns/ssn/Stimulus', 'Class')"
+http://www.w3.org/ns/ssn/System,http://www.w3.org/ns/ssn/,System,Class,"('http://www.w3.org/ns/ssn/System', 'Class')"
+http://www.w3.org/ns/ssn/deployedOnPlatform,http://www.w3.org/ns/ssn/,deployedOnPlatform,ObjectProperty,"('http://www.w3.org/ns/ssn/deployedOnPlatform', 'ObjectProperty')"
+http://www.w3.org/ns/ssn/hasInput,http://www.w3.org/ns/ssn/,hasInput,ObjectProperty,"('http://www.w3.org/ns/ssn/hasInput', 'ObjectProperty')"
+http://www.w3.org/ns/ssn/hasOutput,http://www.w3.org/ns/ssn/,hasOutput,ObjectProperty,"('http://www.w3.org/ns/ssn/hasOutput', 'ObjectProperty')"
+http://www.w3.org/ns/ssn/implementedBy,http://www.w3.org/ns/ssn/,implementedBy,ObjectProperty,"('http://www.w3.org/ns/ssn/implementedBy', 'ObjectProperty')"
+http://www.w3.org/ns/ssn/wasOriginatedBy,http://www.w3.org/ns/ssn/,wasOriginatedBy,ObjectProperty,"('http://www.w3.org/ns/ssn/wasOriginatedBy', 'ObjectProperty')"
